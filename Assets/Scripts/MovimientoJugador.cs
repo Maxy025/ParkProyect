@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MovimientoJugador : MonoBehaviour
+public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
 {
     [SerializeField] private Transform cameraTransform; // Referencia al transform de la cámara para orientar el movimiento del jugador
     [SerializeField] private float velocidadMovimiento = 5f; // Velocidad de movimiento del jugador
@@ -12,6 +12,18 @@ public class MovimientoJugador : MonoBehaviour
     private CharacterController characterController; // Componente CharacterController del jugador
     private Vector2 movimientoInput; // Vector para almacenar el input de movimiento
     private Vector3 velocidad; // Vector para almacenar la velocidad actual del jugador
+
+    // --- Añadido para el sistema de habilidades ---
+    // Permite que HabilidadRecolectarBasura (u otra habilidad futura) reduzca
+    // temporalmente la velocidad de movimiento sin tocar el resto del script.
+    private float multiplicadorVelocidad = 1f;
+
+    public void EstablecerMultiplicadorVelocidad(float multiplicador)
+    {
+        multiplicadorVelocidad = multiplicador;
+    }
+    // --- Fin de lo añadido ---
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,8 +56,8 @@ public class MovimientoJugador : MonoBehaviour
         derecha.Normalize(); // Normalizar la dirección hacia la derecha
          
         Vector3 direccionMovimiento = delante * movimientoInput.y + derecha * movimientoInput.x; // Calcular la dirección de movimiento basada en el input y la orientación de la cámara
-        characterController.Move(direccionMovimiento * velocidadMovimiento * Time.deltaTime); // Mover al jugador según la dirección de movimiento y la velocidad de movimiento
- 
+        characterController.Move(direccionMovimiento * velocidadMovimiento * multiplicadorVelocidad * Time.deltaTime); // Mover al jugador según la dirección de movimiento, la velocidad de movimiento y el multiplicador de carga
+
         if(direccionCara && direccionMovimiento.sqrMagnitude > 0.001F) // Si la opción de dirección cara está activada y el jugador se está moviendo  
         {
             Quaternion rotacionObetivo = Quaternion.LookRotation(direccionMovimiento, Vector3.up); // Calcular la rotación objetivo para que el jugador mire en la dirección del movimiento

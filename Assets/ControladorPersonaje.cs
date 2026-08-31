@@ -114,6 +114,42 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AtaqueBase"",
+                    ""type"": ""Button"",
+                    ""id"": ""772d68c8-bbd4-453e-b4ff-266a434737e4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivarHabilidad"",
+                    ""type"": ""Button"",
+                    ""id"": ""b6361517-ceef-454d-9b72-d776634dba60"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HabilidadSiguiente"",
+                    ""type"": ""Button"",
+                    ""id"": ""05367908-276b-4906-b197-f1dc4afbbbc4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HabilidadAnterior"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a4aa43b-f559-4caf-aced-02009b68d0ee"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -197,11 +233,99 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a5125416-5e96-45e6-a1c8-cdc5339de701"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Saltar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0de45cc8-fb72-4316-89a2-990f6fa6e42c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AtaqueBase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8b33ba3-d8d5-4a2b-a2d7-a14b3940e538"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AtaqueBase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3b35c15-1453-4dd0-aa53-cf97763d04b4"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivarHabilidad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c26b32dd-8a79-49c9-b768-92e57b52c9a4"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivarHabilidad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1a7c80b-f6aa-4bb4-a005-ba70679d92d9"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HabilidadSiguiente"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59e7637d-08d9-494c-af5b-04d7d494efd9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HabilidadSiguiente"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""214dfda2-6432-4399-9b54-d4aa8cce65dd"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HabilidadAnterior"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e98d6f62-d694-42e0-82b3-ec15aa137236"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HabilidadAnterior"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -218,6 +342,10 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Movimiento = m_Gameplay.FindAction("Movimiento", throwIfNotFound: true);
         m_Gameplay_Saltar = m_Gameplay.FindAction("Saltar", throwIfNotFound: true);
+        m_Gameplay_AtaqueBase = m_Gameplay.FindAction("AtaqueBase", throwIfNotFound: true);
+        m_Gameplay_ActivarHabilidad = m_Gameplay.FindAction("ActivarHabilidad", throwIfNotFound: true);
+        m_Gameplay_HabilidadSiguiente = m_Gameplay.FindAction("HabilidadSiguiente", throwIfNotFound: true);
+        m_Gameplay_HabilidadAnterior = m_Gameplay.FindAction("HabilidadAnterior", throwIfNotFound: true);
     }
 
     ~@ControladorPersonaje()
@@ -341,12 +469,20 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_Gameplay_Movimiento;
     private readonly InputAction m_Gameplay_Saltar;
+    private readonly InputAction m_Gameplay_AtaqueBase;
+    private readonly InputAction m_Gameplay_ActivarHabilidad;
+    private readonly InputAction m_Gameplay_HabilidadSiguiente;
+    private readonly InputAction m_Gameplay_HabilidadAnterior;
     public struct GameplayActions
     {
         private @ControladorPersonaje m_Wrapper;
         public GameplayActions(@ControladorPersonaje wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movimiento => m_Wrapper.m_Gameplay_Movimiento;
         public InputAction @Saltar => m_Wrapper.m_Gameplay_Saltar;
+        public InputAction @AtaqueBase => m_Wrapper.m_Gameplay_AtaqueBase;
+        public InputAction @ActivarHabilidad => m_Wrapper.m_Gameplay_ActivarHabilidad;
+        public InputAction @HabilidadSiguiente => m_Wrapper.m_Gameplay_HabilidadSiguiente;
+        public InputAction @HabilidadAnterior => m_Wrapper.m_Gameplay_HabilidadAnterior;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -362,6 +498,18 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @Saltar.started += instance.OnSaltar;
             @Saltar.performed += instance.OnSaltar;
             @Saltar.canceled += instance.OnSaltar;
+            @AtaqueBase.started += instance.OnAtaqueBase;
+            @AtaqueBase.performed += instance.OnAtaqueBase;
+            @AtaqueBase.canceled += instance.OnAtaqueBase;
+            @ActivarHabilidad.started += instance.OnActivarHabilidad;
+            @ActivarHabilidad.performed += instance.OnActivarHabilidad;
+            @ActivarHabilidad.canceled += instance.OnActivarHabilidad;
+            @HabilidadSiguiente.started += instance.OnHabilidadSiguiente;
+            @HabilidadSiguiente.performed += instance.OnHabilidadSiguiente;
+            @HabilidadSiguiente.canceled += instance.OnHabilidadSiguiente;
+            @HabilidadAnterior.started += instance.OnHabilidadAnterior;
+            @HabilidadAnterior.performed += instance.OnHabilidadAnterior;
+            @HabilidadAnterior.canceled += instance.OnHabilidadAnterior;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -372,6 +520,18 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @Saltar.started -= instance.OnSaltar;
             @Saltar.performed -= instance.OnSaltar;
             @Saltar.canceled -= instance.OnSaltar;
+            @AtaqueBase.started -= instance.OnAtaqueBase;
+            @AtaqueBase.performed -= instance.OnAtaqueBase;
+            @AtaqueBase.canceled -= instance.OnAtaqueBase;
+            @ActivarHabilidad.started -= instance.OnActivarHabilidad;
+            @ActivarHabilidad.performed -= instance.OnActivarHabilidad;
+            @ActivarHabilidad.canceled -= instance.OnActivarHabilidad;
+            @HabilidadSiguiente.started -= instance.OnHabilidadSiguiente;
+            @HabilidadSiguiente.performed -= instance.OnHabilidadSiguiente;
+            @HabilidadSiguiente.canceled -= instance.OnHabilidadSiguiente;
+            @HabilidadAnterior.started -= instance.OnHabilidadAnterior;
+            @HabilidadAnterior.performed -= instance.OnHabilidadAnterior;
+            @HabilidadAnterior.canceled -= instance.OnHabilidadAnterior;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -398,5 +558,9 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
     {
         void OnMovimiento(InputAction.CallbackContext context);
         void OnSaltar(InputAction.CallbackContext context);
+        void OnAtaqueBase(InputAction.CallbackContext context);
+        void OnActivarHabilidad(InputAction.CallbackContext context);
+        void OnHabilidadSiguiente(InputAction.CallbackContext context);
+        void OnHabilidadAnterior(InputAction.CallbackContext context);
     }
 }
