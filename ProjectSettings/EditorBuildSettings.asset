@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 86b1742c1cb89ec47ab454617b94cedd
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ParqueHub.unity
+    guid: 6e8076074c485aa4babbc5f292bd7dea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 8732bfee483cd8548a555e849f39f50b, type: 3}
   m_UseUCBPForAssetBundles: 0
