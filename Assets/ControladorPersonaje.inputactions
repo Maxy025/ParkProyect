@@ -128,6 +128,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "f76fbda9-a03d-4f84-94f5-b56275dc35cc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -304,6 +313,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "HabilidadAnterior",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31d808f4-ebd9-4069-bf40-939abdda1b5d",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

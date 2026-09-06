@@ -150,6 +150,15 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pausa"",
+                    ""type"": ""Button"",
+                    ""id"": ""f76fbda9-a03d-4f84-94f5-b56275dc35cc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -328,6 +337,17 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                     ""action"": ""HabilidadAnterior"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31d808f4-ebd9-4069-bf40-939abdda1b5d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -346,6 +366,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         m_Gameplay_ActivarHabilidad = m_Gameplay.FindAction("ActivarHabilidad", throwIfNotFound: true);
         m_Gameplay_HabilidadSiguiente = m_Gameplay.FindAction("HabilidadSiguiente", throwIfNotFound: true);
         m_Gameplay_HabilidadAnterior = m_Gameplay.FindAction("HabilidadAnterior", throwIfNotFound: true);
+        m_Gameplay_Pausa = m_Gameplay.FindAction("Pausa", throwIfNotFound: true);
     }
 
     ~@ControladorPersonaje()
@@ -473,6 +494,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_ActivarHabilidad;
     private readonly InputAction m_Gameplay_HabilidadSiguiente;
     private readonly InputAction m_Gameplay_HabilidadAnterior;
+    private readonly InputAction m_Gameplay_Pausa;
     public struct GameplayActions
     {
         private @ControladorPersonaje m_Wrapper;
@@ -483,6 +505,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         public InputAction @ActivarHabilidad => m_Wrapper.m_Gameplay_ActivarHabilidad;
         public InputAction @HabilidadSiguiente => m_Wrapper.m_Gameplay_HabilidadSiguiente;
         public InputAction @HabilidadAnterior => m_Wrapper.m_Gameplay_HabilidadAnterior;
+        public InputAction @Pausa => m_Wrapper.m_Gameplay_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -510,6 +533,9 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @HabilidadAnterior.started += instance.OnHabilidadAnterior;
             @HabilidadAnterior.performed += instance.OnHabilidadAnterior;
             @HabilidadAnterior.canceled += instance.OnHabilidadAnterior;
+            @Pausa.started += instance.OnPausa;
+            @Pausa.performed += instance.OnPausa;
+            @Pausa.canceled += instance.OnPausa;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -532,6 +558,9 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @HabilidadAnterior.started -= instance.OnHabilidadAnterior;
             @HabilidadAnterior.performed -= instance.OnHabilidadAnterior;
             @HabilidadAnterior.canceled -= instance.OnHabilidadAnterior;
+            @Pausa.started -= instance.OnPausa;
+            @Pausa.performed -= instance.OnPausa;
+            @Pausa.canceled -= instance.OnPausa;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -562,5 +591,6 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         void OnActivarHabilidad(InputAction.CallbackContext context);
         void OnHabilidadSiguiente(InputAction.CallbackContext context);
         void OnHabilidadAnterior(InputAction.CallbackContext context);
+        void OnPausa(InputAction.CallbackContext context);
     }
 }

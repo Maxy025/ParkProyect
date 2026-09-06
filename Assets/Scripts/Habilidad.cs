@@ -10,6 +10,8 @@ public abstract class Habilidad : MonoBehaviour
     [Header("Datos generales")]
     public string nombreHabilidad = "Habilidad";
     public Sprite icono;
+    [TextArea(2, 4)]
+    public string descripcion = "";
 
     /// <summary>Actualizado automáticamente por GestorHabilidades. No lo cambies a mano.</summary>
     [HideInInspector] public bool estaDesbloqueada = false;

@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParqueHub.unity
     guid: 6e8076074c485aa4babbc5f292bd7dea
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1.unity
+    guid: d0267b04dd20a56428e427282311d7cb
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2.unity
+    guid: ffcab5097b5561d4f98af33c059e76ad
+  - enabled: 1
+    path: Assets/Scenes/Nivel 3.unity
+    guid: 6bcd7b24c0a9204479f85496de9f4b0c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 8732bfee483cd8548a555e849f39f50b, type: 3}
   m_UseUCBPForAssetBundles: 0
