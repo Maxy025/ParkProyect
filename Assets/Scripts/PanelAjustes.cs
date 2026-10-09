@@ -1,12 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Controla el panel de ajustes: sliders de música/efectos y el toggle de
-/// pantalla completa. Al mostrarse, sincroniza los controles con los valores
-/// actuales guardados en GestorAudio (para que no se vean en 0 si el jugador
-/// ya había ajustado el volumen antes).
-/// </summary>
+
 public class PanelAjustes : MonoBehaviour
 {
     [Header("Referencias UI")]
@@ -21,8 +16,6 @@ public class PanelAjustes : MonoBehaviour
         GestorAudio gestor = GestorAudio.Obtener();
         if (gestor == null) return;
 
-        // SetValueWithoutNotify evita que, al sincronizar los sliders con los
-        // valores guardados, se disparen sus propios eventos OnValueChanged.
         if (sliderMusica != null) sliderMusica.SetValueWithoutNotify(gestor.VolumenMusicaActual);
         if (sliderEfectos != null) sliderEfectos.SetValueWithoutNotify(gestor.VolumenEfectosActual);
         if (togglePantallaCompleta != null) togglePantallaCompleta.SetIsOnWithoutNotify(Screen.fullScreen);

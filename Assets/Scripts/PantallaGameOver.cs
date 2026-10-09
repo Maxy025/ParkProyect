@@ -9,14 +9,10 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class PantallaGameOver : MonoBehaviour
 {
-    [Header("Referencias")]
     [SerializeField] private GameObject panelGameOver;
 
-    [Header("Reinicio")]
-    [Tooltip("Id del PuntoAparicion donde debe reaparecer el jugador al reiniciar este nivel")]
     [SerializeField] private string idPuntoAparicionReinicio = "Entrada";
 
-    [Header("Salida")]
     [SerializeField] private string nombreEscenaMenuPrincipal = "MenuInicio";
 
     private PlayerHealth vidaJugador;

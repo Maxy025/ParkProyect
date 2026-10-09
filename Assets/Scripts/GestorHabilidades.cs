@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class GestorHabilidades : MonoBehaviour
 {
-    [Header("Habilidades - IMPORTANTE: respeta este orden")]
     [Tooltip("Elemento 0 = Cortar maleza (nivel 1) · 1 = Regar (nivel 2) · 2 = Recolectar basura (nivel 3)")]
     [SerializeField] private Habilidad[] habilidades = new Habilidad[3];
 
