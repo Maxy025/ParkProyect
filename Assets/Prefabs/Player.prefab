@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5838399897076648369}
   - component: {fileID: 3145169435784229674}
   - component: {fileID: 4791265562164303003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CamaraTerceraPersona
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 6269870995422261063}
   - component: {fileID: 2199938032283269270}
   - component: {fileID: 4693418972900987332}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar_Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 2204006237333098001}
   - component: {fileID: 6924215318457617575}
   - component: {fileID: 5465903222494120425}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Borde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 8066115197764701921}
   - component: {fileID: 5272891663709559720}
   - component: {fileID: 1248954089029991405}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Habilidad Basura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 280945425523758222}
   - component: {fileID: 5778802686354873901}
   - component: {fileID: 3487850150929714845}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Borde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 4933817022624155385}
   - component: {fileID: 6707160274596465670}
   - component: {fileID: 6166296306885029783}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Borde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 5248035516289091252}
   - component: {fileID: 5921331506000588722}
   - component: {fileID: 4208541826437128608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NarizRotacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 589063898559578159}
   - component: {fileID: 4267821719239253542}
   - component: {fileID: 937570129052874087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuntoAparicionAgua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 6182530219261813070}
   - component: {fileID: 5951287339516097573}
   - component: {fileID: 7479955377372566511}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InterfazJugador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 8519252809931719161}
   - component: {fileID: 919733235036968056}
   - component: {fileID: 4601122270488068888}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PanelHabilidades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5578894365569046401}
   - component: {fileID: 7437304805703242903}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 2409899205304185152}
   - component: {fileID: 4141380634581975846}
   - component: {fileID: 8059481811847137355}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Candado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 8443528977834730574}
   - component: {fileID: 4496582976221666929}
   - component: {fileID: 466094212152446627}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Habilidad Tijeras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 6092478466678831368}
   - component: {fileID: 5255787995252298489}
   - component: {fileID: 7304670539439227261}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 5376720550079309897}
   - component: {fileID: 6890544615641357039}
   - component: {fileID: 6478054909108584587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1512,7 +1512,7 @@ Transform:
   m_GameObject: {fileID: 7106436872095803643}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15212339, y: 0.000000014707098, z: -0.000000002263639, w: 0.98836154}
-  m_LocalPosition: {x: 0, y: 2.3232377, z: -7.368368}
+  m_LocalPosition: {x: 0.22, y: 3.973238, z: 117.57163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 5862664340457289121}
   - component: {fileID: 8137635848871124556}
   - component: {fileID: 3525268900526083490}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Candado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,7 +1771,7 @@ GameObject:
   - component: {fileID: 7840584319091980677}
   - component: {fileID: 2323739316650782202}
   - component: {fileID: 5837303504877185704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2119,8 +2119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danoAtaque: 10
-  rangoAtaque: 1.5
-  radioAtaque: 0.6
+  rangoAtaque: 2.2
+  radioAtaque: 1
   enfriamientoAtaque: 0.5
   mascaraCapaEnemigo:
     serializedVersion: 2
@@ -2225,7 +2225,7 @@ GameObject:
   - component: {fileID: 5350012759973074310}
   - component: {fileID: 838088408112218913}
   - component: {fileID: 5614143341415850241}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Candado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2321,7 +2321,7 @@ GameObject:
   - component: {fileID: 3886198340060727166}
   - component: {fileID: 9029850214160676108}
   - component: {fileID: 3981569017483808204}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Habilidad Regar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,7 +2419,7 @@ GameObject:
   - component: {fileID: 2423382041240692956}
   - component: {fileID: 159156006794303958}
   - component: {fileID: 3277939350767495555}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InterfazUsuario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2522,7 @@ GameObject:
   - component: {fileID: 455885775638789832}
   - component: {fileID: 2497849661437520048}
   - component: {fileID: 8580846824388662957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EsferaAgua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2632,7 +2632,7 @@ GameObject:
   - component: {fileID: 3791010387558208962}
   - component: {fileID: 1506216541668318770}
   - component: {fileID: 3945680282643618640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tijeras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2778,6 +2778,10 @@ PrefabInstance:
     - target: {fileID: 2015328166385840242, guid: c2cc3ec8a747700409fc5be340ae310f, type: 3}
       propertyPath: m_Name
       value: Ataque
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015328166385840242, guid: c2cc3ec8a747700409fc5be340ae310f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2015328166385840242, guid: c2cc3ec8a747700409fc5be340ae310f, type: 3}
       propertyPath: m_IsActive
