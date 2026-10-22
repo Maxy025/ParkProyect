@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,11 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
     // --- Añadido para el sistema de habilidades ---
     // Permite que HabilidadRecolectarBasura (u otra habilidad futura) reduzca
     // temporalmente la velocidad de movimiento sin tocar el resto del script.
+
+    // Animaciones
+    private Animator animator;
+
+    // ------- //
     private float multiplicadorVelocidad = 1f;
 
     public void EstablecerMultiplicadorVelocidad(float multiplicador)
@@ -27,6 +33,7 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -62,6 +69,12 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
         {
             Quaternion rotacionObetivo = Quaternion.LookRotation(direccionMovimiento, Vector3.up); // Calcular la rotación objetivo para que el jugador mire en la dirección del movimiento
             transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObetivo, Time.deltaTime * 10f); // Interpolar suavemente la rotación del jugador hacia la rotación objetivo
+
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
         }
 
 

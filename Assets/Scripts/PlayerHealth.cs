@@ -40,6 +40,8 @@ public class PlayerHealth : MonoBehaviour
     public float HealthPercentage => maxHealth > 0 ? currentHealth / maxHealth : 0f;
     public bool IsDead => isDead;
 
+    private Animator animator;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -47,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         // Notifica a la UI el estado inicial (barra llena)
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
@@ -61,6 +64,8 @@ public class PlayerHealth : MonoBehaviour
         {
             RegenerateHealth();
         }
+
+        //animator.SetBool("isHurt", false);
     }
 
     /// <summary>
@@ -75,6 +80,8 @@ public class PlayerHealth : MonoBehaviour
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnDamageTaken?.Invoke();
+
+        animator.SetTrigger("Hurt");
 
         if (currentHealth <= 0f)
         {
