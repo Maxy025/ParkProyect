@@ -10,6 +10,9 @@ public class MenuPrincipal : MonoBehaviour
 
     public void IrAInicio()
     {
+        // Partida nueva: se borran los objetivos, niveles completados y
+        // objetos limpiados de la partida anterior.
+        ProgresoJuego.Reiniciar();
         SceneManager.LoadScene(nombreEscenaHub);
     }
 

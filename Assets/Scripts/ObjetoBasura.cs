@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Basura recolectable en el mundo. El jugador la recoge automáticamente
@@ -9,6 +10,10 @@ using UnityEngine;
 public class ObjetoBasura : MonoBehaviour
 {
     [SerializeField] private GameObject prefabEfectoRecoleccion;
+
+    [Tooltip("Se invoca justo antes de que la basura desaparezca al ser recolectada. " +
+             "Lo usa EstadoPersistente para que no reaparezca al volver a la escena.")]
+    public UnityEvent AlRecolectar;
 
     private HabilidadRecolectarBasura habilidadBasura;
 
@@ -29,6 +34,7 @@ public class ObjetoBasura : MonoBehaviour
             if (prefabEfectoRecoleccion != null)
                 Instantiate(prefabEfectoRecoleccion, transform.position, Quaternion.identity);
 
+            AlRecolectar?.Invoke();
             Destroy(gameObject);
         }
         // Si el inventario está lleno (o la habilidad no está equipada),
