@@ -356,6 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &106354017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1318,6 +1321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &303629978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1706,6 +1712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &419327479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1829,6 +1838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 50
+  alertarAlRecibirDano: 1
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -2087,7 +2097,7 @@ GameObject:
   - component: {fileID: 534729803}
   - component: {fileID: 534729802}
   - component: {fileID: 534729801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,6 +2227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &545064386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2547,6 +2560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &624418475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4612,6 +4628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1429622250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5331,6 +5350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1831640268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5667,6 +5689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoRecoleccion: {fileID: 0}
+  AlRecolectar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &2143304209
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,12 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>
-/// Ataque base del jugador, disponible desde el inicio del juego (antes de
-/// desbloquear cualquier habilidad). Es independiente del sistema de
-/// habilidades. Engancha el método enAtaqueBase desde el componente
-/// Player Input (Behavior = "Invoke Unity Events") en la acción "AtaqueBase".
-/// </summary>
 public class CombateJugador : MonoBehaviour
 {
     [Header("Ataque")]
@@ -15,18 +9,29 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private float radioAtaque = 0.6f;
     [SerializeField] private float enfriamientoAtaque = 0.5f;
     [SerializeField] private LayerMask mascaraCapaEnemigo = ~0;
-    [SerializeField] private Animator animadorJugador;
     [SerializeField] private string disparadorAnimAtaque = "Attack";
 
     [Header("Efecto visual (temporal, para pruebas)")]
-    [Tooltip("Prefab opcional para el efecto de golpe. Si lo dejas vacío, se genera " +
-             "automáticamente una esfera del tamaño exacto del rango de detección, " +
-             "útil mientras ajustas los números o no tienes un efecto final todavía.")]
     [SerializeField] private GameObject efectoAtaquePrefab;
     [SerializeField] private float duracionEfecto = 0.15f;
     [SerializeField] private Color colorEsferaPrueba = new Color(1f, 0.25f, 0.1f);
 
     private float ultimoTiempoAtaque = -Mathf.Infinity;
+
+    // Animaciones
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+        // Nos aseguramos de que la capa de golpe empiece con peso 1 
+        // (el peso lo filtra la máscara, así que no afectará al Idle si la máscara está bien hecha)
+        if (animator != null)
+        {
+            animator.SetLayerWeight(1, 1f);
+        }
+    }
 
     public void enAtaqueBase(InputAction.CallbackContext contexto)
     {
@@ -40,9 +45,9 @@ public class CombateJugador : MonoBehaviour
     {
         ultimoTiempoAtaque = Time.time;
 
-        if (animadorJugador != null)
-            animadorJugador.SetTrigger(disparadorAnimAtaque);
+        animator.SetTrigger("Golpe");
 
+        // Lógica de daño
         Vector3 origen = transform.position + Vector3.up * 0.5f + transform.forward * (rangoAtaque * 0.5f);
         Collider[] impactos = Physics.OverlapSphere(origen, radioAtaque, mascaraCapaEnemigo);
 
@@ -67,8 +72,6 @@ public class CombateJugador : MonoBehaviour
         }
         else
         {
-            // Esfera generada por código, del mismo tamaño exacto que el
-            // OverlapSphere real, para visualizar el rango mientras pruebas.
             efecto = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             efecto.name = "EfectoAtaquePrueba";
             efecto.transform.position = origen;

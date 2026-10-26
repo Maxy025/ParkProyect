@@ -30,8 +30,21 @@ public class HabilidadRecolectarBasura : Habilidad
     public int BasuraCargada => basuraCargada;
     public int CapacidadCargaMaxima => capacidadCargaMaxima;
 
+    //Animaciones
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+        if (animator != null)
+        {
+            animator.SetLayerWeight(1, 1f);
+        }
+    }
     public override void AlEquipar()
     {
+        animator.SetBool("tieneBasura", true);
         estaEquipada = true;
 
         if (prefabBoteBasura != null && boteBasuraGenerado == null)
@@ -58,6 +71,7 @@ public class HabilidadRecolectarBasura : Habilidad
 
     public override void AlDesequipar()
     {
+        animator.SetBool("tieneBasura", false);
         estaEquipada = false;
 
         if (boteBasuraGenerado != null)
@@ -75,6 +89,10 @@ public class HabilidadRecolectarBasura : Habilidad
 
         basuraCargada++;
         ActualizarVelocidadMovimiento();
+
+        animator.SetInteger("basuraEnMano", basuraCargada);
+        Debug.Log(basuraCargada);
+
         return true;
     }
 
@@ -83,6 +101,9 @@ public class HabilidadRecolectarBasura : Habilidad
     {
         int depositado = basuraCargada;
         basuraCargada = 0;
+
+        animator.SetInteger("basuraEnMano", basuraCargada);
+
         ActualizarVelocidadMovimiento();
         return depositado;
     }

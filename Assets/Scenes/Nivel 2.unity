@@ -3016,6 +3016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 50
+  alertarAlRecibirDano: 1
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -4526,7 +4527,7 @@ GameObject:
   - component: {fileID: 1875852107}
   - component: {fileID: 1875852106}
   - component: {fileID: 1875852105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}

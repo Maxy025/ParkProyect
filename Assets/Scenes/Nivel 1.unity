@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 194120724}
   - component: {fileID: 194120723}
   - component: {fileID: 194120722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4661,6 +4661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 50
+  alertarAlRecibirDano: 1
   AlMorir:
     m_PersistentCalls:
       m_Calls: []

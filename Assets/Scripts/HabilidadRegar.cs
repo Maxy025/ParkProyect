@@ -27,13 +27,28 @@ public class HabilidadRegar : Habilidad
     private float tiempoCarga = 0f;
     private bool estaCargando = false;
 
+    //Animaciones
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+        if (animator != null)
+        {
+            animator.SetLayerWeight(1, 1f);
+        }
+    }
+
     public override void AlEquipar()
     {
         if (visualEsferaAgua != null) visualEsferaAgua.SetActive(false);
+        animator.SetBool("tieneSpray", true);
     }
 
     public override void AlDesequipar()
     {
+        animator.SetBool("tieneSpray", false);
         CancelarCarga();
     }
 

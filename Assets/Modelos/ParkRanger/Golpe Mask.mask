@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Golpe Mask
+  m_Mask: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: body
+    m_Weight: 0
+  - m_Path: bolsa
+    m_Weight: 0
+  - m_Path: hat
+    m_Weight: 0
+  - m_Path: ParkRanger_Guides
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Head
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Hips
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftFoot
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftForeArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftHand
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftLeg
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftShoulder
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftToeBase
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/LeftUpLeg
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Neck
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Reference
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightFoot
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightForeArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightHand
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightLeg
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightShoulder
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightToeBase
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/RightUpLeg
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Spine
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Spine1
+    m_Weight: 1
+  - m_Path: ParkRanger_Guides/Spine2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_LeftUpLeg
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_LeftUpLeg/ParkRanger_LeftLeg
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_LeftUpLeg/ParkRanger_LeftLeg/ParkRanger_LeftFoot
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_LeftUpLeg/ParkRanger_LeftLeg/ParkRanger_LeftFoot/ParkRanger_LeftToeBase
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_RightUpLeg
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_RightUpLeg/ParkRanger_RightLeg
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_RightUpLeg/ParkRanger_RightLeg/ParkRanger_RightFoot
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_RightUpLeg/ParkRanger_RightLeg/ParkRanger_RightFoot/ParkRanger_RightToeBase
+    m_Weight: 0
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftMiddle1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftMiddle1/ParkRanger_LeftMiddle2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftMiddle1/ParkRanger_LeftMiddle2/ParkRanger_LeftMiddle3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftMiddle1/ParkRanger_LeftMiddle2/ParkRanger_LeftMiddle3/ParkRanger_LeftMiddle4
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftPointer1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftPointer1/ParkRanger_LeftPointer2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftPointer1/ParkRanger_LeftPointer2/ParkRanger_LeftPointer3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftPointer1/ParkRanger_LeftPointer2/ParkRanger_LeftPointer3/ParkRanger_LeftPointer4
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftThumb1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftThumb1/ParkRanger_LeftThumb2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftThumb1/ParkRanger_LeftThumb2/ParkRanger_LeftThumb3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_LeftShoulder/ParkRanger_LeftArm/ParkRanger_LeftForeArm/ParkRanger_LeftHand/ParkRanger_LeftThumb1/ParkRanger_LeftThumb2/ParkRanger_LeftThumb3/ParkRanger_LeftThumb4
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_Neck
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_Neck/ParkRanger_Head
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightMiddle1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightMiddle1/ParkRanger_RightMiddle2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightMiddle1/ParkRanger_RightMiddle2/ParkRanger_RightMiddle3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightMiddle1/ParkRanger_RightMiddle2/ParkRanger_RightMiddle3/ParkRanger_RightMiddle4
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightPointer1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightPointer1/ParkRanger_RightPointer2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightPointer1/ParkRanger_RightPointer2/ParkRanger_RightPointer3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightPointer1/ParkRanger_RightPointer2/ParkRanger_RightPointer3/ParkRanger_RightPointer4
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightThumb1
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightThumb1/ParkRanger_RightThumb2
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightThumb1/ParkRanger_RightThumb2/ParkRanger_RightThumb3
+    m_Weight: 1
+  - m_Path: ParkRanger_Reference/ParkRanger_Hips/ParkRanger_Spine/ParkRanger_Spine1/ParkRanger_Spine2/ParkRanger_RightShoulder/ParkRanger_RightArm/ParkRanger_RightForeArm/ParkRanger_RightHand/ParkRanger_RightThumb1/ParkRanger_RightThumb2/ParkRanger_RightThumb3/ParkRanger_RightThumb4
+    m_Weight: 1
+  - m_Path: regadera
+    m_Weight: 0
+  - m_Path: tijerasGRP
+    m_Weight: 0
+  - m_Path: tijerasGRP/blade01
+    m_Weight: 0
+  - m_Path: tijerasGRP/blade02
+    m_Weight: 0

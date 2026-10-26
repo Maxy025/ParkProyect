@@ -35,15 +35,15 @@ ModelImporter:
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 175
-      lastFrame: 175
+      lastFrame: 176
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -130,7 +130,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -179,7 +179,7 @@ ModelImporter:
       name: Agua_Idle
       takeName: Take 001
       internalID: 6234510843852800090
-      firstFrame: 120
+      firstFrame: 119
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
@@ -209,15 +209,15 @@ ModelImporter:
       takeName: Take 001
       internalID: -6788666626592393668
       firstFrame: 125
-      lastFrame: 125
+      lastFrame: 126
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -296,15 +296,15 @@ ModelImporter:
       takeName: Take 001
       internalID: -4045831500588228705
       firstFrame: 178
-      lastFrame: 178
+      lastFrame: 179
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -353,8 +353,8 @@ ModelImporter:
       name: Jump_Squat
       takeName: Take 001
       internalID: -6577145938085917429
-      firstFrame: 182
-      lastFrame: 182
+      firstFrame: 181
+      lastFrame: 183
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -382,7 +382,7 @@ ModelImporter:
       name: Jump_Air
       takeName: Take 001
       internalID: -5912188926831197812
-      firstFrame: 185
+      firstFrame: 184
       lastFrame: 185
       wrapMode: 0
       orientationOffsetY: 0
@@ -474,7 +474,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

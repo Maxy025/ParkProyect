@@ -10,6 +10,12 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
     [SerializeField] private float gravedad = -9.8f; // Gravedad aplicada al jugador
     [SerializeField] private bool direccionCara = false; // Variable para determinar si el jugador debe mirar en la dirección del movimiento
 
+    [Header("Ground Detection")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundRadius;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private bool isGrounded;
+
     private CharacterController characterController; // Componente CharacterController del jugador
     private Vector2 movimientoInput; // Vector para almacenar el input de movimiento
     private Vector3 velocidad; // Vector para almacenar la velocidad actual del jugador
@@ -47,6 +53,8 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
        
         if (context.performed && characterController.isGrounded)
         {
+            Debug.Log("Estoy en el aire");
+            animator.SetTrigger("Salto");
             velocidad.y = Mathf.Sqrt(alturaSalto * -2f * gravedad);
         }
     }
@@ -58,14 +66,15 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
 
         delante.y = 0; // Eliminar la componente vertical para que el movimiento sea horizontal
         derecha.y = 0; // Eliminar la componente vertical para que el movimiento sea horizontal
-        
+
         delante.Normalize(); // Normalizar la dirección hacia adelante
         derecha.Normalize(); // Normalizar la dirección hacia la derecha
-         
+
+
         Vector3 direccionMovimiento = delante * movimientoInput.y + derecha * movimientoInput.x; // Calcular la dirección de movimiento basada en el input y la orientación de la cámara
         characterController.Move(direccionMovimiento * velocidadMovimiento * multiplicadorVelocidad * Time.deltaTime); // Mover al jugador según la dirección de movimiento, la velocidad de movimiento y el multiplicador de carga
 
-        if(direccionCara && direccionMovimiento.sqrMagnitude > 0.001F) // Si la opción de dirección cara está activada y el jugador se está moviendo  
+        if (direccionCara && direccionMovimiento.sqrMagnitude > 0.001F) // Si la opción de dirección cara está activada y el jugador se está moviendo  
         {
             Quaternion rotacionObetivo = Quaternion.LookRotation(direccionMovimiento, Vector3.up); // Calcular la rotación objetivo para que el jugador mire en la dirección del movimiento
             transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObetivo, Time.deltaTime * 10f); // Interpolar suavemente la rotación del jugador hacia la rotación objetivo
@@ -77,8 +86,24 @@ public class MovimientoJugador : MonoBehaviour, IVelocidadModificable
             animator.SetBool("IsMoving", false);
         }
 
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, (int)whatIsGround);
 
-        velocidad.y += gravedad * Time.deltaTime; // Aplicar gravedad al jugador
-        characterController.Move(velocidad * Time.deltaTime); // Mover al jugador según la velocidad actual
+        if (isGrounded) 
+        {
+            animator.SetBool("enSuelo", true);
+        }
+        else
+        {
+            animator.SetBool("enSuelo", false);
+        }        
+
+        // Aplicar gravedad
+        velocidad.y += gravedad * Time.deltaTime;
+
+        // Combinar movimiento horizontal y vertical en un solo vector
+        Vector3 movimientoTotal = (direccionMovimiento * velocidadMovimiento * multiplicadorVelocidad) + new Vector3(0, velocidad.y, 0);
+
+        // Mover una sola vez por frame
+        characterController.Move(movimientoTotal * Time.deltaTime);
     }
 }
