@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: e1c4f7c5bc08458408a2be439767101b
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Asfalto
+    second: {fileID: 2100000, guid: 885b9d1acc8b2bd4d9ac0a7506d38a01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Bache
+    second: {fileID: 2100000, guid: bf4f4c26b6501944b9303dce568c2e14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Bandera
+    second: {fileID: 2100000, guid: 36474d7fa09a46947bbd5a9772c58e73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Banqueta
+    second: {fileID: 2100000, guid: f01c4d3166dff5a419d61094a761ce16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Barda
+    second: {fileID: 2100000, guid: b7c236acb4dfab741a487dd0d42e59e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Basura_Bolsa
+    second: {fileID: 2100000, guid: 64243d7eebb19614bb70051fd41e0fd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Botella
+    second: {fileID: 2100000, guid: 220f33d2829e2354e98312105c0bb28b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Carton
+    second: {fileID: 2100000, guid: 62210a1fa2da97c4daaa9da96f58ad4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Edificio
+    second: {fileID: 2100000, guid: 30bef843caa74454e8d3b8f0d83f4ce6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Guarnicion
+    second: {fileID: 2100000, guid: 0efb70a5e036e6c4abd51de04d55aa33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Inicio
+    second: {fileID: 2100000, guid: 1d406035d42a28645a734444cacd67e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Meta
+    second: {fileID: 2100000, guid: 7b1f8199e1a80c3498c3951c639a716a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Metal
+    second: {fileID: 2100000, guid: 5e92e4d5c0c02f64ead18961892272f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Neon_Recolectable
+    second: {fileID: 2100000, guid: e26e2f710d186634996eae483a6d365c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_PH_Arbol
+    second: {fileID: 2100000, guid: c1d0f237a02d6ab4fbf6d2e1d60c5257, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_PH_Planta_Deteriorada
+    second: {fileID: 2100000, guid: 205ef7efe03624a42953e5fe1c8e9894, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Pintura_Gastada
+    second: {fileID: 2100000, guid: 4d7475837a3648d4d926dc7c3a5b5b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Ref_Jugador
+    second: {fileID: 2100000, guid: b3098a7b1f60bc14d928eddd1408f572, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Senal_Amarilla
+    second: {fileID: 2100000, guid: e7f0c61121e676b44964402bda1e3557, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Senal_Azul
+    second: {fileID: 2100000, guid: 5c54e476772b9e2419d56dfc251670e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Tactil_Gastado
+    second: {fileID: 2100000, guid: 342a7a1df9b9bbd459ba113db0fba237, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Techo_Parada
+    second: {fileID: 2100000, guid: cb004e99807f8a64b9a98251456d637e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Tierra
+    second: {fileID: 2100000, guid: 2807ee2986a880e48b260fc5a99fe90b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Vehiculo
+    second: {fileID: 2100000, guid: 04c89762378ed624db02494d1012a226, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GB_Vehiculo_Cabina
+    second: {fileID: 2100000, guid: f18b13408b7c48f47a4f904064e07ac4, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

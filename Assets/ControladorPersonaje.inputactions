@@ -137,6 +137,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interactuar",
+                    "type": "Button",
+                    "id": "ad2d6ec0-d917-4a2c-a08e-a3a60e1df2f3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -324,6 +333,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02a865c1-2175-45d9-8ecd-b221d8359400",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactuar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

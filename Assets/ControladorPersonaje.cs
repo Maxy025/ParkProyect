@@ -159,6 +159,15 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interactuar"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad2d6ec0-d917-4a2c-a08e-a3a60e1df2f3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -348,6 +357,17 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
                     ""action"": ""Pausa"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02a865c1-2175-45d9-8ecd-b221d8359400"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interactuar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -367,6 +387,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         m_Gameplay_HabilidadSiguiente = m_Gameplay.FindAction("HabilidadSiguiente", throwIfNotFound: true);
         m_Gameplay_HabilidadAnterior = m_Gameplay.FindAction("HabilidadAnterior", throwIfNotFound: true);
         m_Gameplay_Pausa = m_Gameplay.FindAction("Pausa", throwIfNotFound: true);
+        m_Gameplay_Interactuar = m_Gameplay.FindAction("Interactuar", throwIfNotFound: true);
     }
 
     ~@ControladorPersonaje()
@@ -495,6 +516,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_HabilidadSiguiente;
     private readonly InputAction m_Gameplay_HabilidadAnterior;
     private readonly InputAction m_Gameplay_Pausa;
+    private readonly InputAction m_Gameplay_Interactuar;
     public struct GameplayActions
     {
         private @ControladorPersonaje m_Wrapper;
@@ -506,6 +528,7 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         public InputAction @HabilidadSiguiente => m_Wrapper.m_Gameplay_HabilidadSiguiente;
         public InputAction @HabilidadAnterior => m_Wrapper.m_Gameplay_HabilidadAnterior;
         public InputAction @Pausa => m_Wrapper.m_Gameplay_Pausa;
+        public InputAction @Interactuar => m_Wrapper.m_Gameplay_Interactuar;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -536,6 +559,9 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @Pausa.started += instance.OnPausa;
             @Pausa.performed += instance.OnPausa;
             @Pausa.canceled += instance.OnPausa;
+            @Interactuar.started += instance.OnInteractuar;
+            @Interactuar.performed += instance.OnInteractuar;
+            @Interactuar.canceled += instance.OnInteractuar;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -561,6 +587,9 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
             @Pausa.started -= instance.OnPausa;
             @Pausa.performed -= instance.OnPausa;
             @Pausa.canceled -= instance.OnPausa;
+            @Interactuar.started -= instance.OnInteractuar;
+            @Interactuar.performed -= instance.OnInteractuar;
+            @Interactuar.canceled -= instance.OnInteractuar;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -592,5 +621,6 @@ public partial class @ControladorPersonaje: IInputActionCollection2, IDisposable
         void OnHabilidadSiguiente(InputAction.CallbackContext context);
         void OnHabilidadAnterior(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
+        void OnInteractuar(InputAction.CallbackContext context);
     }
 }

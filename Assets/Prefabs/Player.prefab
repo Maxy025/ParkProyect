@@ -1512,7 +1512,7 @@ Transform:
   m_GameObject: {fileID: 7106436872095803643}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15212339, y: 0.000000014707098, z: -0.000000002263639, w: 0.98836154}
-  m_LocalPosition: {x: 0, y: 2.3232377, z: -7.368368}
+  m_LocalPosition: {x: 0.22, y: 3.3232374, z: 117.57163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1896,6 +1896,12 @@ MonoBehaviour:
   alturaSalto: 2
   gravedad: -9.8
   direccionCara: 1
+  groundCheck: {fileID: 0}
+  groundRadius: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 0
 --- !u!114 &7640448621264616375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,6 +2035,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f76fbda9-a03d-4f84-94f5-b56275dc35cc
     m_ActionName: 'Gameplay/Pausa[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ad2d6ec0-d917-4a2c-a08e-a3a60e1df2f3
+    m_ActionName: 'Gameplay/Interactuar[/Keyboard/f]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlCamara
@@ -2101,7 +2111,6 @@ MonoBehaviour:
   mascaraCapaEnemigo:
     serializedVersion: 2
     m_Bits: 8
-  animadorJugador: {fileID: 0}
   disparadorAnimAtaque: Attack
   efectoAtaquePrefab: {fileID: 0}
   duracionEfecto: 0.15
@@ -2645,7 +2654,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9182024521321408775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
