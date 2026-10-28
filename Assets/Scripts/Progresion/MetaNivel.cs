@@ -44,6 +44,12 @@ public class MetaNivel : MonoBehaviour
     [Tooltip("Oculta a los enemigos que sigan vivos al completar el nivel, para que no ataquen durante la cuenta regresiva.")]
     [SerializeField] private bool ocultarEnemigosAlLlegar = true;
 
+    [Tooltip("Si el nivel ya se había completado antes, al volver a entrar se ocultan los enemigos de la escena.")]
+    [SerializeField] private bool ocultarEnemigosSiYaCompletado = true;
+
+    [Tooltip("Si el nivel ya se había completado antes, al volver a entrar se ocultan las malezas de la escena.")]
+    [SerializeField] private bool ocultarMalezasSiYaCompletado = true;
+
     [Header("Recompensa (opcional)")]
     [Tooltip("-1 = ninguna (nivel 3) · 0 = Tijeras (nivel 1) · 1 = Regar (nivel 2) · 2 = Basura")]
     [SerializeField] private int indiceHabilidad = -1;
@@ -100,6 +106,12 @@ public class MetaNivel : MonoBehaviour
 
         bool yaCompletado = ProgresoJuego.EstaCompletado(idNivelCompletado);
         AplicarRestauracion(yaCompletado && mostrarRestauradoSiYaCompletado);
+
+        if (yaCompletado)
+        {
+            if (ocultarEnemigosSiYaCompletado) OcultarEnemigos();
+            if (ocultarMalezasSiYaCompletado) OcultarMalezas();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -198,5 +210,13 @@ public class MetaNivel : MonoBehaviour
         foreach (EnemigoIA enemigo in enemigos)
             if (enemigo.gameObject.scene == gameObject.scene)
                 enemigo.gameObject.SetActive(false);
+    }
+
+    private void OcultarMalezas()
+    {
+        Maleza[] malezas = FindObjectsByType<Maleza>(FindObjectsSortMode.None);
+        foreach (Maleza maleza in malezas)
+            if (maleza.gameObject.scene == gameObject.scene)
+                maleza.gameObject.SetActive(false);
     }
 }
