@@ -14,6 +14,10 @@ public class ZonaPeligrosa : MonoBehaviour
     [SerializeField] private GameObject visualPeligro;
     [SerializeField] private Collider colisionadorPeligro;
 
+    [Tooltip("Sonido al limpiar el peligro con agua (fuego que se apaga, ácido que burbujea...). " +
+             "Para el sonido en bucle del peligro, pon un AudioSource + FuenteSonidoBucle en el Visual Peligro.")]
+    [SerializeField] private SonidoAleatorio sonidoAlLimpiar = new SonidoAleatorio();
+
     public UnityEvent AlLimpiar;
 
     private bool estaLimpia = false;
@@ -38,6 +42,8 @@ public class ZonaPeligrosa : MonoBehaviour
 
         if (visualPeligro != null) visualPeligro.SetActive(false);
         if (colisionadorPeligro != null) colisionadorPeligro.enabled = false;
+
+        ReproductorAudio.ReproducirEn(sonidoAlLimpiar, transform.position);
 
         AlLimpiar?.Invoke();
     }

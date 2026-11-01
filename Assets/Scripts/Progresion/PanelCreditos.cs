@@ -21,10 +21,17 @@ public class PanelCreditos : MonoBehaviour
     [Tooltip("Vuelve a empezar cuando el texto termina de pasar.")]
     [SerializeField] private bool repetir = true;
 
+    [Header("Música (opcional)")]
+    [Tooltip("Música mientras se ven los créditos. Al cerrar vuelve la música que sonaba antes.")]
+    [SerializeField] private AudioClip musicaCreditos;
+    [SerializeField, Range(0f, 1f)] private float volumenMusicaCreditos = 0.7f;
+
     [Header("Salida")]
     [SerializeField] private string nombreEscenaMenuPrincipal = "MenuInicio";
 
     private Vector2 posicionInicial;
+    private AudioClip musicaAnterior;
+    private float volumenMusicaAnterior = 1f;
     private bool abierto = false;
 
     public bool EstaAbierto => abierto;
@@ -55,6 +62,14 @@ public class PanelCreditos : MonoBehaviour
         if (contenido != null) contenido.anchoredPosition = posicionInicial;
         if (panel != null) panel.SetActive(true);
 
+        GestorAudio gestor = GestorAudio.Obtener();
+        if (musicaCreditos != null && gestor != null)
+        {
+            musicaAnterior = gestor.MusicaActual;
+            volumenMusicaAnterior = gestor.VolumenMusicaPista;
+            gestor.ReproducirMusica(musicaCreditos, volumenMusicaCreditos);
+        }
+
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -67,6 +82,10 @@ public class PanelCreditos : MonoBehaviour
 
         abierto = false;
         if (panel != null) panel.SetActive(false);
+
+        GestorAudio gestor = GestorAudio.Obtener();
+        if (musicaCreditos != null && gestor != null)
+            gestor.ReproducirMusica(musicaAnterior, volumenMusicaAnterior);
 
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;

@@ -15,6 +15,9 @@ public class Regable : MonoBehaviour
              "el método Crecer() de PlataformaCreciente.cs")]
     public EventoFlotante AlRegar;
 
+    [Tooltip("Sonido al regarse con éxito (planta que crece, flor que se abre...).")]
+    [SerializeField] private SonidoAleatorio sonidoAlRegar = new SonidoAleatorio();
+
     private bool yaActivado = false;
 
     public void Regar(float cantidad)
@@ -23,6 +26,7 @@ public class Regable : MonoBehaviour
         if (cantidad < cantidadAguaRequerida) return;
 
         yaActivado = true;
+        ReproductorAudio.ReproducirEn(sonidoAlRegar, transform.position);
         AlRegar?.Invoke(cantidad);
     }
 }

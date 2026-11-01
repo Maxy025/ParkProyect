@@ -42,6 +42,12 @@ public class ObjetivoEnemigosVencidos : MonoBehaviour
     [Tooltip("Si se activa, el texto se oculta cuando el objetivo ya estaba completado al cargar la escena.")]
     [SerializeField] private bool ocultarTextoSiYaCompletado = true;
 
+    [Header("Sonidos")]
+    [Tooltip("Suena cada vez que el contador sube.")]
+    [SerializeField] private SonidoAleatorio sonidoConteo = new SonidoAleatorio();
+    [Tooltip("Suena al completar el objetivo (ej. se abre el portal).")]
+    [SerializeField] private SonidoAleatorio sonidoCompletado = new SonidoAleatorio();
+
     [Header("Eventos")]
     [Tooltip("Se invoca cada vez que se vence un enemigo (envía el total de vencidos).")]
     public EventoEntero AlCambiarConteo = new EventoEntero();
@@ -116,6 +122,8 @@ public class ObjetivoEnemigosVencidos : MonoBehaviour
 
         if (vencidos >= enemigosRequeridos)
             Completar();
+        else
+            ReproductorAudio.Reproducir2D(sonidoConteo);
     }
 
     private void Completar()
@@ -124,6 +132,7 @@ public class ObjetivoEnemigosVencidos : MonoBehaviour
         ProgresoJuego.MarcarCompletado(idObjetivo);
         AplicarDesbloqueo(true);
         ActualizarTexto();
+        ReproductorAudio.Reproducir2D(sonidoCompletado);
         AlCompletarObjetivo?.Invoke();
     }
 

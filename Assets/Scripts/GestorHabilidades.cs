@@ -8,6 +8,10 @@ public class GestorHabilidades : MonoBehaviour
     [Tooltip("Elemento 0 = Cortar maleza (nivel 1) · 1 = Regar (nivel 2) · 2 = Recolectar basura (nivel 3)")]
     [SerializeField] private Habilidad[] habilidades = new Habilidad[3];
 
+    [Header("Sonidos")]
+    [Tooltip("Suena al cambiar de habilidad con Q/E (también al guardarla en el estado neutro).")]
+    [SerializeField] private SonidoAleatorio sonidoCambiarHabilidad = new SonidoAleatorio();
+
     [Header("Eventos (para la UI del menú)")]
     public EventoCambioHabilidad AlEquiparHabilidad;
     public EventoEntero AlDesbloquearHabilidad;
@@ -92,6 +96,8 @@ public class GestorHabilidades : MonoBehaviour
         HabilidadActual?.AlDesequipar();
         indiceActual = indice;
         HabilidadActual?.AlEquipar();
+
+        ReproductorAudio.Reproducir2D(sonidoCambiarHabilidad);
 
         AlEquiparHabilidad?.Invoke(indiceActual, HabilidadActual);
     }

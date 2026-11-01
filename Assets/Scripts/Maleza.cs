@@ -10,7 +10,8 @@ public class Maleza : MonoBehaviour
 {
     [Header("Al cortar")]
     [SerializeField] private GameObject prefabEfectoCorte;
-    [SerializeField] private AudioClip sonidoCorte;
+    [Tooltip("Sonido al cortar (varios clips = variación al azar).")]
+    [SerializeField] private SonidoAleatorio sonidoCorte = new SonidoAleatorio();
     [Tooltip("Si está activo, el objeto se destruye. Si no, solo se desactiva.")]
     [SerializeField] private bool destruirAlCortar = true;
 
@@ -27,8 +28,7 @@ public class Maleza : MonoBehaviour
         if (prefabEfectoCorte != null)
             Instantiate(prefabEfectoCorte, transform.position, Quaternion.identity);
 
-        if (sonidoCorte != null)
-            AudioSource.PlayClipAtPoint(sonidoCorte, transform.position);
+        ReproductorAudio.ReproducirEn(sonidoCorte, transform.position);
 
         AlCortar?.Invoke();
 

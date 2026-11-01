@@ -29,6 +29,12 @@ public class ObjetivoMalezasCortadas : MonoBehaviour
 
     [SerializeField] private string textoCompletado = "¡El camellón ha sido restaurado!";
 
+    [Header("Sonidos")]
+    [Tooltip("Suena cada vez que el contador sube.")]
+    [SerializeField] private SonidoAleatorio sonidoConteo = new SonidoAleatorio();
+    [Tooltip("Suena al completar el objetivo.")]
+    [SerializeField] private SonidoAleatorio sonidoCompletado = new SonidoAleatorio();
+
     [Header("Eventos")]
     [Tooltip("Se invoca cada vez que se corta una maleza (envía el total de cortadas).")]
     public EventoEntero AlCambiarConteo = new EventoEntero();
@@ -99,7 +105,12 @@ public class ObjetivoMalezasCortadas : MonoBehaviour
         {
             completado = true;
             ActualizarTexto();
+            ReproductorAudio.Reproducir2D(sonidoCompletado);
             AlCompletarObjetivo?.Invoke();
+        }
+        else
+        {
+            ReproductorAudio.Reproducir2D(sonidoConteo);
         }
     }
 

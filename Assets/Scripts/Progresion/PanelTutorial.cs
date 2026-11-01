@@ -38,6 +38,12 @@ public class PanelTutorial : MonoBehaviour
     [Tooltip("Tecla que se usa si la acción no existe en el Input Actions.")]
     [SerializeField] private Key teclaRespaldo = Key.F;
 
+    [Header("Sonidos")]
+    [Tooltip("Suena cuando aparece el aviso 'Presiona F' al acercarse a un cartel.")]
+    [SerializeField] private SonidoAleatorio sonidoAviso = new SonidoAleatorio();
+    [SerializeField] private SonidoAleatorio sonidoAbrir = new SonidoAleatorio();
+    [SerializeField] private SonidoAleatorio sonidoCerrar = new SonidoAleatorio();
+
     [Header("Comportamiento")]
     [Tooltip("Congela el juego y libera el cursor mientras el mensaje está abierto.")]
     [SerializeField] private bool pausarAlLeer = true;
@@ -59,7 +65,7 @@ public class PanelTutorial : MonoBehaviour
     private void Start()
     {
         JugadorPersistente jugador = JugadorPersistente.Obtener();
-        if (jugador != null && jugador.InputJugador != null)
+        if (jugador != null && jugador.InputJugador != null && jugador.InputJugador.actions != null)
             accionInteractuar = jugador.InputJugador.actions.FindAction(nombreAccion);
 
         if (accionInteractuar != null)
@@ -118,6 +124,7 @@ public class PanelTutorial : MonoBehaviour
 
         abierto = true;
         if (panel != null) panel.SetActive(true);
+        ReproductorAudio.Reproducir2D(sonidoAbrir);
         ActualizarAviso();
         cartel.MarcarLeido();
 
@@ -136,6 +143,7 @@ public class PanelTutorial : MonoBehaviour
 
         abierto = false;
         if (panel != null) panel.SetActive(false);
+        ReproductorAudio.Reproducir2D(sonidoCerrar);
         ActualizarAviso();
 
         if (pausarAlLeer)
@@ -148,6 +156,7 @@ public class PanelTutorial : MonoBehaviour
 
     public void RegistrarCartelCercano(CartelTutorial cartel)
     {
+        if (cartelCercano == null && !abierto) ReproductorAudio.Reproducir2D(sonidoAviso);
         cartelCercano = cartel;
         ActualizarAviso();
     }

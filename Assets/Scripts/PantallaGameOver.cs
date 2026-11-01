@@ -15,6 +15,12 @@ public class PantallaGameOver : MonoBehaviour
 
     [SerializeField] private string nombreEscenaMenuPrincipal = "MenuInicio";
 
+    [Header("Sonidos")]
+    [Tooltip("Jingle de derrota.")]
+    [SerializeField] private SonidoAleatorio sonidoGameOver = new SonidoAleatorio();
+    [Tooltip("Detiene la música del nivel al perder (vuelve sola al reiniciar).")]
+    [SerializeField] private bool detenerMusica = true;
+
     private PlayerHealth vidaJugador;
 
     private void Start()
@@ -37,6 +43,10 @@ public class PantallaGameOver : MonoBehaviour
     {
         Time.timeScale = 0f;
         if (panelGameOver != null) panelGameOver.SetActive(true);
+
+        ReproductorAudio.Reproducir2D(sonidoGameOver);
+        if (detenerMusica && GestorAudio.Obtener() != null)
+            GestorAudio.Obtener().DetenerMusica(0.5f);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

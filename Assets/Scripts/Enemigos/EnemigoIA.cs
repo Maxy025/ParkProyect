@@ -87,6 +87,16 @@ public abstract class EnemigoIA : MonoBehaviour
     [Tooltip("Nombre del parámetro Trigger del Animator que se dispara al preparar un ataque.")]
     [SerializeField] protected string triggerAtaque = "Atacar";
 
+    [Header("Sonidos (opcional)")]
+    [Tooltip("Suena cuando el enemigo descubre al jugador y empieza a perseguirlo.")]
+    [SerializeField] protected SonidoAleatorio sonidoAlerta = new SonidoAleatorio();
+
+    [Tooltip("Suena al empezar la preparación del ataque (el aviso antes de embestir).")]
+    [SerializeField] protected SonidoAleatorio sonidoPreparacion = new SonidoAleatorio();
+
+    [Tooltip("Suena al lanzar la embestida (o la picada del volador).")]
+    [SerializeField] protected SonidoAleatorio sonidoEmbestida = new SonidoAleatorio();
+
     [Header("Depuración")]
     [Tooltip("Dibuja en la escena los radios y el cono de visión al seleccionar el enemigo.")]
     [SerializeField] private bool mostrarGizmos = true;
@@ -303,6 +313,7 @@ public abstract class EnemigoIA : MonoBehaviour
         if (DistanciaAlJugador() > rangoAtaque) return;
 
         CambiarEstado(EstadoEnemigo.Atacando);
+        ReproductorAudio.ReproducirEn(sonidoPreparacion, transform.position);
 
         if (usarTriggerAtaque)
             animador.SetTrigger(hashAtaque);
@@ -326,6 +337,7 @@ public abstract class EnemigoIA : MonoBehaviour
                     faseAtaque = FaseAtaque.Embestida;
                     temporizadorFase = duracionEmbestida;
                     ActivarColliderDano(true);
+                    ReproductorAudio.ReproducirEn(sonidoEmbestida, transform.position);
                 }
                 break;
 
@@ -420,6 +432,8 @@ public abstract class EnemigoIA : MonoBehaviour
         estadoActual = nuevoEstado;
 
         if (anterior == EstadoEnemigo.Atacando) TerminarAtaque();
+        if (anterior == EstadoEnemigo.Patrullando && nuevoEstado == EstadoEnemigo.Persiguiendo)
+            ReproductorAudio.ReproducirEn(sonidoAlerta, transform.position);
         if (anterior == EstadoEnemigo.Patrullando) ultimoMomentoVisto = Time.time;
         if (nuevoEstado == EstadoEnemigo.Atacando) IniciarAtaque();
 
