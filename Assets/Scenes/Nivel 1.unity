@@ -491,7 +491,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips:
+    - {fileID: 8300000, guid: 197c3eeb5f640034cb569a3ff26b1554, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -660,7 +664,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -967,7 +974,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -1619,6 +1629,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -1659,6 +1677,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -2234,6 +2264,21 @@ MonoBehaviour:
   avisoInteractuar: {fileID: 1022198383}
   nombreAccion: Interactuar
   teclaRespaldo: 20
+  sonidoAviso:
+    clips:
+    - {fileID: 8300000, guid: d01600b768ad8154ea57cd72da396ff8, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoAbrir:
+    clips:
+    - {fileID: 8300000, guid: d3acc03eb0545bf498640a0737c27d4f, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoCerrar:
+    clips:
+    - {fileID: 8300000, guid: f1eacfddc1cae1e4bbc18b93e95eb1de, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   pausarAlLeer: 1
 --- !u!114 &162826230
 MonoBehaviour:
@@ -3474,7 +3519,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -3622,7 +3670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -4107,7 +4158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -4807,7 +4861,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -5211,6 +5268,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -5251,6 +5316,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -5472,7 +5549,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -5731,7 +5811,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -5900,7 +5983,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -6047,6 +6133,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreEscenaDestino: ParqueHub
   idPuntoAparicionDestino: DesdeNivel1
+  sonidoEntrar:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!65 &706933325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7391,6 +7481,55 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0020000008, y: 0.08999998, z: 0.017999997}
   m_Center: {x: -0.000000018626451, y: -0.000000029802322, z: 9.313226e-10}
+--- !u!1 &739486160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739486162}
+  - component: {fileID: 739486161}
+  m_Layer: 0
+  m_Name: Musica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &739486161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739486160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ef2f5554fea6a4ebb50a4d56f28307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musica: {fileID: 8300000, guid: 496aa05cc3d7ced4592aaa57ae983e18, type: 3}
+  volumenMusica: 0.32
+  ambiente: {fileID: 0}
+  volumenAmbiente: 0.4
+  duracionFundido: 1.5
+--- !u!4 &739486162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739486160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 172.82538, y: 281.55823, z: 276.4375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740443071
 GameObject:
   m_ObjectHideFlags: 0
@@ -7424,7 +7563,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -8196,7 +8338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -9018,7 +9163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -9276,7 +9424,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -9759,7 +9910,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -10187,6 +10341,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -10227,6 +10389,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -12971,7 +13145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -13427,6 +13604,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -13467,6 +13652,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -14611,7 +14808,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -14950,6 +15150,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -14990,6 +15198,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -15122,7 +15342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1208534808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15328,6 +15548,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -15368,6 +15596,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioPatrulla: 8
@@ -16209,6 +16449,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -16249,6 +16497,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -16419,6 +16679,7 @@ GameObject:
   - component: {fileID: 1344351319}
   - component: {fileID: 1344351318}
   - component: {fileID: 1344351317}
+  - component: {fileID: 1344351320}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -16490,7 +16751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433975146}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: SalirAMenuPrincipal
         m_Mode: 1
@@ -16540,6 +16801,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344351315}
   m_CullTransparentMesh: 1
+--- !u!114 &1344351320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344351315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aad23fbb92b2944f9b0ab0167bc8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoClic:
+    clips:
+    - {fileID: 8300000, guid: a8f8fc0555e424048b32206e0d1550d0, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoResaltar:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!1 &1349340475
 GameObject:
   m_ObjectHideFlags: 0
@@ -16852,6 +17134,7 @@ GameObject:
   - component: {fileID: 1394004249}
   - component: {fileID: 1394004248}
   - component: {fileID: 1394004247}
+  - component: {fileID: 1394004250}
   m_Layer: 5
   m_Name: Controles
   m_TagString: Untagged
@@ -16973,6 +17256,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394004245}
   m_CullTransparentMesh: 1
+--- !u!114 &1394004250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394004245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aad23fbb92b2944f9b0ab0167bc8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoClic:
+    clips:
+    - {fileID: 8300000, guid: a8f8fc0555e424048b32206e0d1550d0, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoResaltar:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!65 &1403407669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17249,6 +17553,12 @@ MonoBehaviour:
   panelGameOver: {fileID: 196649167}
   idPuntoAparicionReinicio: DesdeHub
   nombreEscenaMenuPrincipal: MenuPrincioal
+  sonidoGameOver:
+    clips:
+    - {fileID: 8300000, guid: ee7a44b6cb038744f93e339549547012, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  detenerMusica: 1
 --- !u!114 &1414996593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17365,7 +17675,7 @@ GameObject:
   - component: {fileID: 1433975149}
   - component: {fileID: 1433975148}
   - component: {fileID: 1433975147}
-  - component: {fileID: 1433975146}
+  - component: {fileID: 1433975151}
   m_Layer: 5
   m_Name: MenuPausa
   m_TagString: Untagged
@@ -17373,21 +17683,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1433975146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433975145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8ccb6c0f36aa54c8c661a0f83b8ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPausa: {fileID: 141876758}
-  idPuntoAparicionReinicio: SpawnHub
-  nombreEscenaMenuPrincipal: MenuPrincipal
 --- !u!114 &1433975147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17472,6 +17767,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1433975151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433975145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8ccb6c0f36aa54c8c661a0f83b8ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelPausa: {fileID: 0}
+  sonidoAbrir:
+    clips:
+    - {fileID: 8300000, guid: 0fbd729313e8d5b43a79611e2c82faf8, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoCerrar:
+    clips:
+    - {fileID: 8300000, guid: 723aa30ad49cef8478dfd3b5fbe92532, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  idPuntoAparicionReinicio: SpawnHub
+  nombreEscenaMenuPrincipal: MenuPrincipal
 --- !u!1 &1446671051
 GameObject:
   m_ObjectHideFlags: 0
@@ -17505,7 +17825,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -18120,7 +18443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -18333,6 +18659,11 @@ MonoBehaviour:
   textoNombre: {fileID: 1925683956}
   imagenIcono: {fileID: 150667612}
   textoDescripcion: {fileID: 1405096283}
+  sonidoMostrar:
+    clips:
+    - {fileID: 8300000, guid: 9dbe08ade3b522148bf144322f4aff5e, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!1 &1493681974
 GameObject:
   m_ObjectHideFlags: 0
@@ -18586,7 +18917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -18961,6 +19295,15 @@ MonoBehaviour:
   textoContador: {fileID: 1664493757}
   formatoTexto: 'Malezas cortadas: {0}/{1}'
   textoCompletado: "\xA1El camell\xF3n ha sido restaurado!"
+  sonidoConteo:
+    clips:
+    - {fileID: 8300000, guid: c7bb915a9af88be4dae7130e77e66f9f, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoCompletado:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlCambiarConteo:
     m_PersistentCalls:
       m_Calls: []
@@ -19343,6 +19686,7 @@ GameObject:
   - component: {fileID: 1637229436}
   - component: {fileID: 1637229435}
   - component: {fileID: 1637229434}
+  - component: {fileID: 1637229437}
   m_Layer: 5
   m_Name: Cerrar
   m_TagString: Untagged
@@ -19464,6 +19808,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637229432}
   m_CullTransparentMesh: 1
+--- !u!114 &1637229437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637229432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aad23fbb92b2944f9b0ab0167bc8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoClic:
+    clips:
+    - {fileID: 8300000, guid: a8f8fc0555e424048b32206e0d1550d0, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoResaltar:
+    clips: []
+    volumen: 0.04
+    rangoTono: {x: 1, y: 1.5}
 --- !u!65 &1644862902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19663,7 +20028,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -19790,7 +20158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -19917,7 +20288,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -20561,6 +20935,7 @@ GameObject:
   - component: {fileID: 1705427228}
   - component: {fileID: 1705427227}
   - component: {fileID: 1705427226}
+  - component: {fileID: 1705427229}
   m_Layer: 5
   m_Name: Reiniciar Nivel
   m_TagString: Untagged
@@ -20632,7 +21007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433975146}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: ReiniciarNivel
         m_Mode: 1
@@ -20682,6 +21057,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705427224}
   m_CullTransparentMesh: 1
+--- !u!114 &1705427229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705427224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aad23fbb92b2944f9b0ab0167bc8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoClic:
+    clips:
+    - {fileID: 8300000, guid: a8f8fc0555e424048b32206e0d1550d0, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoResaltar:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!65 &1711516407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20791,6 +21187,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -20831,6 +21235,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -20895,6 +21311,7 @@ GameObject:
   - component: {fileID: 1745103522}
   - component: {fileID: 1745103521}
   - component: {fileID: 1745103520}
+  - component: {fileID: 1745103523}
   m_Layer: 5
   m_Name: Ajustes
   m_TagString: Untagged
@@ -21016,6 +21433,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745103518}
   m_CullTransparentMesh: 1
+--- !u!114 &1745103523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745103518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aad23fbb92b2944f9b0ab0167bc8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoClic:
+    clips:
+    - {fileID: 8300000, guid: a8f8fc0555e424048b32206e0d1550d0, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoResaltar:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
 --- !u!65 &1747409395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21070,7 +21508,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -21370,7 +21811,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -22220,7 +22664,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -23011,7 +23458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -23159,7 +23609,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -23341,6 +23794,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -23381,6 +23842,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -23728,7 +24201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -23855,7 +24331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -24042,6 +24521,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 50
   alertarAlRecibirDano: 1
+  sonidoDano:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoMuerte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   AlMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -24082,6 +24569,18 @@ MonoBehaviour:
   animador: {fileID: 0}
   parametroVelocidad: Velocidad
   triggerAtaque: Atacar
+  sonidoAlerta:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoPreparacion:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoEmbestida:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   mostrarGizmos: 1
   puntosPatrulla: []
   radioDeambular: 8
@@ -24162,7 +24661,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -24289,7 +24791,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -24437,7 +24942,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -24829,7 +25337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -25113,7 +25624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -25261,7 +25775,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEfectoCorte: {fileID: 0}
-  sonidoCorte: {fileID: 0}
+  sonidoCorte:
+    clips: []
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
   destruirAlCortar: 1
   AlCortar:
     m_PersistentCalls:
@@ -25578,6 +26095,22 @@ MonoBehaviour:
   idPuntoAparicionHub: DesdeNivel1
   segundosAntesDeRegresar: 3
   restablecerVidaAlRegresar: 1
+  sonidoLlegada:
+    clips:
+    - {fileID: 8300000, guid: dff2d58a905290e44a8f95317532d33f, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoCompletar:
+    clips:
+    - {fileID: 8300000, guid: c8e55d195d6526140a84e7fed885bd40, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  sonidoCuentaRegresiva:
+    clips:
+    - {fileID: 8300000, guid: 13ed03e6177dc3a46b056824f99e2178, type: 3}
+    volumen: 1
+    rangoTono: {x: 0.95, y: 1.05}
+  detenerMusicaAlCompletar: 1
   AlLlegarMeta:
     m_PersistentCalls:
       m_Calls: []
@@ -25717,3 +26250,4 @@ SceneRoots:
   - {fileID: 1335026393}
   - {fileID: 236929599}
   - {fileID: 1433975150}
+  - {fileID: 739486162}

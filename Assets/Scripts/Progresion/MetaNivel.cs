@@ -81,6 +81,19 @@ public class MetaNivel : MonoBehaviour
     [Tooltip("Cura al jugador al máximo al regresar al Hub.")]
     [SerializeField] private bool restablecerVidaAlRegresar = true;
 
+    [Header("Sonidos")]
+    [Tooltip("Suena al tocar la meta.")]
+    [SerializeField] private SonidoAleatorio sonidoLlegada = new SonidoAleatorio();
+
+    [Tooltip("Jingle de victoria al completar el nivel (justo antes de la cuenta regresiva).")]
+    [SerializeField] private SonidoAleatorio sonidoCompletar = new SonidoAleatorio();
+
+    [Tooltip("Suena cada segundo de la cuenta regresiva (tic).")]
+    [SerializeField] private SonidoAleatorio sonidoCuentaRegresiva = new SonidoAleatorio();
+
+    [Tooltip("Baja la música del nivel al completarlo, para que se escuche el jingle.")]
+    [SerializeField] private bool detenerMusicaAlCompletar = true;
+
     [Header("Eventos")]
     [Tooltip("Se invoca al tocar la meta (sonido, partículas...).")]
     public UnityEvent AlLlegarMeta;
@@ -125,6 +138,7 @@ public class MetaNivel : MonoBehaviour
             foreach (GameObject objeto in objetosOcultarAlLlegar)
                 if (objeto != null) objeto.SetActive(false);
 
+        ReproductorAudio.Reproducir2D(sonidoLlegada);
         AlLlegarMeta?.Invoke();
         DarRecompensa();
 
@@ -158,6 +172,10 @@ public class MetaNivel : MonoBehaviour
         if (ocultarEnemigosAlLlegar) OcultarEnemigos();
         if (mensajeMeta != null) mensajeMeta.SetActive(true);
 
+        ReproductorAudio.Reproducir2D(sonidoCompletar);
+        if (detenerMusicaAlCompletar && GestorAudio.Obtener() != null)
+            GestorAudio.Obtener().DetenerMusica(1f);
+
         AlCompletarNivel?.Invoke();
 
         if (textoCuentaRegresiva != null) textoCuentaRegresiva.gameObject.SetActive(true);
@@ -165,10 +183,20 @@ public class MetaNivel : MonoBehaviour
         // Se usa Time.deltaTime: si hay un panel abierto (Time.timeScale = 0),
         // la cuenta se detiene hasta que el jugador lo cierre.
         float restante = segundosAntesDeRegresar;
+        int ultimoSegundo = -1;
         while (restante > 0f)
         {
+            int segundo = Mathf.CeilToInt(restante);
+
             if (textoCuentaRegresiva != null)
-                textoCuentaRegresiva.text = string.Format(formatoCuentaRegresiva, Mathf.CeilToInt(restante));
+                textoCuentaRegresiva.text = string.Format(formatoCuentaRegresiva, segundo);
+
+            // Un "tic" cada vez que cambia el número.
+            if (segundo != ultimoSegundo)
+            {
+                ultimoSegundo = segundo;
+                ReproductorAudio.Reproducir2D(sonidoCuentaRegresiva);
+            }
 
             yield return null;
             restante -= Time.deltaTime;

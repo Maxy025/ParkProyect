@@ -14,6 +14,9 @@ public class BoteBasura : MonoBehaviour
              "una puerta o zona nueva al alcanzar cierta cantidad de basura recolectada.")]
     public EventoEntero AlDepositarBasura;
 
+    [Tooltip("Sonido al depositar la basura en el bote.")]
+    [SerializeField] private SonidoAleatorio sonidoDepositar = new SonidoAleatorio();
+
     private HabilidadRecolectarBasura habilidad;
 
     public void Inicializar(HabilidadRecolectarBasura habilidadPropietaria)
@@ -27,6 +30,7 @@ public class BoteBasura : MonoBehaviour
         if (habilidad == null || habilidad.BasuraCargada <= 0) return;
 
         totalDepositado += habilidad.DepositarTodo();
+        ReproductorAudio.ReproducirEn(sonidoDepositar, transform.position);
         AlDepositarBasura?.Invoke(totalDepositado);
     }
 }

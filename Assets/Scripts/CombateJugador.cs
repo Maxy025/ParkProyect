@@ -11,6 +11,12 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private LayerMask mascaraCapaEnemigo = ~0;
     [SerializeField] private string disparadorAnimAtaque = "Attack";
 
+    [Header("Sonidos")]
+    [Tooltip("Sonido del golpe al aire (suena siempre que ataca).")]
+    [SerializeField] private SonidoAleatorio sonidoAtaque = new SonidoAleatorio();
+    [Tooltip("Sonido extra cuando el golpe le pega a algo (enemigo).")]
+    [SerializeField] private SonidoAleatorio sonidoImpacto = new SonidoAleatorio();
+
     [Header("Efecto visual (temporal, para pruebas)")]
     [SerializeField] private GameObject efectoAtaquePrefab;
     [SerializeField] private float duracionEfecto = 0.15f;
@@ -50,14 +56,19 @@ public class CombateJugador : MonoBehaviour
         // Lógica de daño
         Vector3 origen = transform.position + Vector3.up * 0.5f + transform.forward * (rangoAtaque * 0.5f);
         Collider[] impactos = Physics.OverlapSphere(origen, radioAtaque, mascaraCapaEnemigo);
+        bool golpeoAlgo = false;
 
         foreach (Collider impacto in impactos)
         {
             if (impacto.TryGetComponent(out IDanable danable))
             {
                 danable.RecibirDano(danoAtaque);
+                golpeoAlgo = true;
             }
         }
+
+        ReproductorAudio.ReproducirEn(sonidoAtaque, transform.position, 0f);
+        if (golpeoAlgo) ReproductorAudio.ReproducirEn(sonidoImpacto, origen, 0f);
 
         MostrarEfectoAtaque(origen);
     }

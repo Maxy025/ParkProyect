@@ -14,6 +14,12 @@ public class VidaEnemigo : MonoBehaviour, IDanable
     [Tooltip("Si se activa, al recibir daño el enemigo reacciona: persigue al jugador y retrocede (se configura en su IA).")]
     [SerializeField] private bool alertarAlRecibirDano = true;
 
+    [Header("Sonidos")]
+    [Tooltip("Sonido al recibir un golpe (sin morir).")]
+    [SerializeField] private SonidoAleatorio sonidoDano = new SonidoAleatorio();
+    [Tooltip("Sonido al morir. Sigue sonando aunque el enemigo se destruya.")]
+    [SerializeField] private SonidoAleatorio sonidoMuerte = new SonidoAleatorio();
+
     [Header("Eventos")]
     [Tooltip("Se invoca una sola vez cuando el enemigo muere.")]
     public UnityEvent AlMorir = new UnityEvent();
@@ -43,10 +49,13 @@ public class VidaEnemigo : MonoBehaviour, IDanable
         if (vidaActual <= 0f)
         {
             vidaActual = 0f;
+            ReproductorAudio.ReproducirEn(sonidoMuerte, transform.position);
             AlMorir?.Invoke();
             Destroy(gameObject);
             return;
         }
+
+        ReproductorAudio.ReproducirEn(sonidoDano, transform.position);
 
         // Reacción al golpe: persigue al jugador y retrocede (cancela su ataque).
         if (alertarAlRecibirDano && ia != null)

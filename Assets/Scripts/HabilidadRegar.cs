@@ -24,6 +24,16 @@ public class HabilidadRegar : Habilidad
     [SerializeField] private GameObject prefabEfectoSalpicadura;
     [SerializeField] private LayerMask mascaraCapaSalpicadura = ~0;
 
+    [Header("Sonidos")]
+    [Tooltip("Sonido en bucle mientras se carga la esfera. Su tono sube conforme crece.")]
+    [SerializeField] private AudioClip sonidoCarga;
+    [SerializeField, Range(0f, 1f)] private float volumenCarga = 0.6f;
+    [SerializeField] private float tonoCargaInicial = 0.8f;
+    [SerializeField] private float tonoCargaFinal = 1.4f;
+    [Tooltip("Sonido de la explosión de agua al soltar.")]
+    [SerializeField] private SonidoAleatorio sonidoSalpicadura = new SonidoAleatorio();
+
+    private AudioSource fuenteCarga;
     private float tiempoCarga = 0f;
     private bool estaCargando = false;
 
@@ -62,6 +72,15 @@ public class HabilidadRegar : Habilidad
             visualEsferaAgua.SetActive(true);
             visualEsferaAgua.transform.localScale = Vector3.one * escalaMinima;
         }
+
+        if (sonidoCarga != null)
+        {
+            if (fuenteCarga == null) fuenteCarga = ReproductorAudio.CrearFuenteBucle(gameObject, 0f);
+            fuenteCarga.clip = sonidoCarga;
+            fuenteCarga.pitch = tonoCargaInicial;
+            fuenteCarga.volume = volumenCarga * ReproductorAudio.FactorEfectos;
+            fuenteCarga.Play();
+        }
     }
 
     public override void AlMantenerActivar()
@@ -70,11 +89,13 @@ public class HabilidadRegar : Habilidad
 
         tiempoCarga = Mathf.Min(tiempoCarga + Time.deltaTime, tiempoCargaMaxima);
 
+        float t = tiempoCarga / tiempoCargaMaxima;
+
         if (visualEsferaAgua != null)
-        {
-            float t = tiempoCarga / tiempoCargaMaxima;
             visualEsferaAgua.transform.localScale = Vector3.one * Mathf.Lerp(escalaMinima, escalaMaxima, t);
-        }
+
+        if (fuenteCarga != null && fuenteCarga.isPlaying)
+            fuenteCarga.pitch = Mathf.Lerp(tonoCargaInicial, tonoCargaFinal, t);
     }
 
     public override void AlSoltarActivar()
@@ -97,6 +118,8 @@ public class HabilidadRegar : Habilidad
             efecto.transform.localScale = Vector3.one * Mathf.Max(0.1f, radio / radioSalpicaduraMaximo);
         }
 
+        ReproductorAudio.ReproducirEn(sonidoSalpicadura, origen, 0.5f);
+
         Collider[] impactos = Physics.OverlapSphere(origen, radio, mascaraCapaSalpicadura);
         foreach (Collider impacto in impactos)
         {
@@ -115,6 +138,7 @@ public class HabilidadRegar : Habilidad
         estaCargando = false;
         tiempoCarga = 0f;
         if (visualEsferaAgua != null) visualEsferaAgua.SetActive(false);
+        if (fuenteCarga != null) fuenteCarga.Stop();
     }
 
     private void OnDrawGizmosSelected()

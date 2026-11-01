@@ -14,6 +14,9 @@ public class PortalDeNivel : MonoBehaviour
     [Tooltip("Debe coincidir con el Id de un PuntoAparicion dentro de la escena de destino")]
     [SerializeField] private string idPuntoAparicionDestino = "Entrada";
 
+    [Tooltip("Sonido al entrar al portal. Sigue sonando durante el cambio de escena.")]
+    [SerializeField] private SonidoAleatorio sonidoEntrar = new SonidoAleatorio();
+
     private void Reset()
     {
         GetComponent<Collider>().isTrigger = true;
@@ -23,6 +26,7 @@ public class PortalDeNivel : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
+        ReproductorAudio.Reproducir2D(sonidoEntrar);
         GestorNiveles.CargarNivel(nombreEscenaDestino, idPuntoAparicionDestino);
     }
 }

@@ -23,6 +23,17 @@ public class HabilidadRecolectarBasura : Habilidad
     [Tooltip("Multiplicador de velocidad al llevar la carga máxima (1 = sin penalización)")]
     [SerializeField, Range(0.1f, 1f)] private float multiplicadorVelocidadCargaMaxima = 0.5f;
 
+    [Header("Sonidos")]
+    [Tooltip("Suena cuando aparece el bote al equipar la habilidad.")]
+    [SerializeField] private SonidoAleatorio sonidoAparecerBote = new SonidoAleatorio();
+    [Tooltip("Suena al recoger una basura.")]
+    [SerializeField] private SonidoAleatorio sonidoRecolectar = new SonidoAleatorio();
+    [Tooltip("Suena al tocar basura con el inventario lleno.")]
+    [SerializeField] private SonidoAleatorio sonidoInventarioLleno = new SonidoAleatorio();
+    [Tooltip("Segundos mínimos entre avisos de inventario lleno (para que no suene sin parar).")]
+    [SerializeField, Min(0f)] private float esperaAvisoLleno = 1f;
+
+    private float ultimoAvisoLleno = -Mathf.Infinity;
     private GameObject boteBasuraGenerado;
     private int basuraCargada = 0;
     private bool estaEquipada = false;
@@ -63,6 +74,7 @@ public class HabilidadRecolectarBasura : Habilidad
             }
 
             boteBasuraGenerado = Instantiate(prefabBoteBasura, posicionAparicion, Quaternion.identity);
+            ReproductorAudio.ReproducirEn(sonidoAparecerBote, posicionAparicion);
 
             if (boteBasuraGenerado.TryGetComponent(out BoteBasura bote))
                 bote.Inicializar(this);
@@ -85,9 +97,18 @@ public class HabilidadRecolectarBasura : Habilidad
     public bool IntentarRecolectar()
     {
         if (!estaEquipada) return false;
-        if (basuraCargada >= capacidadCargaMaxima) return false;
+        if (basuraCargada >= capacidadCargaMaxima)
+        {
+            if (Time.time >= ultimoAvisoLleno + esperaAvisoLleno)
+            {
+                ultimoAvisoLleno = Time.time;
+                ReproductorAudio.ReproducirEn(sonidoInventarioLleno, jugador.position, 0f);
+            }
+            return false;
+        }
 
         basuraCargada++;
+        ReproductorAudio.ReproducirEn(sonidoRecolectar, jugador.position, 0f);
         ActualizarVelocidadMovimiento();
 
         animator.SetInteger("basuraEnMano", basuraCargada);

@@ -17,6 +17,10 @@ public class MenuPausa : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private GameObject panelPausa;
 
+    [Header("Sonidos")]
+    [SerializeField] private SonidoAleatorio sonidoAbrir = new SonidoAleatorio();
+    [SerializeField] private SonidoAleatorio sonidoCerrar = new SonidoAleatorio();
+
     [Header("Reinicio")]
     [Tooltip("Id del PuntoAparicion donde debe reaparecer el jugador al reiniciar este nivel")]
     [SerializeField] private string idPuntoAparicionReinicio = "Entrada";
@@ -30,10 +34,14 @@ public class MenuPausa : MonoBehaviour
     private void Start()
     {
         JugadorPersistente jugador = JugadorPersistente.Obtener();
-        if (jugador != null && jugador.InputJugador != null)
+        if (jugador != null && jugador.InputJugador != null && jugador.InputJugador.actions != null)
         {
             accionPausa = jugador.InputJugador.actions.FindAction("Pausa");
             if (accionPausa != null) accionPausa.performed += OnPausaPerformed;
+        }
+        else
+        {
+            Debug.LogWarning("[MenuPausa] El PlayerInput del jugador no tiene un Input Actions asignado (campo Actions). La pausa no funcionará.", this);
         }
     }
 
@@ -53,6 +61,7 @@ public class MenuPausa : MonoBehaviour
 
         if (panelPausa != null) panelPausa.SetActive(estaPausado);
         Time.timeScale = estaPausado ? 0f : 1f;
+        ReproductorAudio.Reproducir2D(estaPausado ? sonidoAbrir : sonidoCerrar);
 
         // El script de cámara bloquea el cursor una sola vez al iniciar; hay
         // que liberarlo aquí para poder hacer clic en los botones del menú.

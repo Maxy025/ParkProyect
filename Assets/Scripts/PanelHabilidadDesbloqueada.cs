@@ -15,6 +15,10 @@ public class PanelHabilidadDesbloqueada : MonoBehaviour
     [SerializeField] private Image imagenIcono;
     [SerializeField] private TMP_Text textoDescripcion;
 
+    [Header("Sonidos")]
+    [Tooltip("Jingle al mostrar la habilidad nueva.")]
+    [SerializeField] private SonidoAleatorio sonidoMostrar = new SonidoAleatorio();
+
     public void Mostrar(Habilidad habilidad)
     {
         if (textoNombre != null) textoNombre.text = habilidad.nombreHabilidad;
@@ -27,6 +31,7 @@ public class PanelHabilidadDesbloqueada : MonoBehaviour
         }
 
         if (panel != null) panel.SetActive(true);
+        ReproductorAudio.Reproducir2D(sonidoMostrar);
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
