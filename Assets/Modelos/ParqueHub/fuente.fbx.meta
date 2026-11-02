@@ -3,7 +3,17 @@ guid: 38e32158e76bec249b1ec1e642d758ae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuente
+    second: {fileID: 2100000, guid: 866eda425357d9d4ba38c70efa66948b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuente.001
+    second: {fileID: 2100000, guid: d8d7e95ff4de3d74ba057dc451a93e12, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

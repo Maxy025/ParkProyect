@@ -48,6 +48,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7443067716381896126, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e4197b0d9fb374aa4deea58ebfc9ee, type: 2}
+    - target: {fileID: -5859236356072154334, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5859236356072154334, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b8811676cd955d4ab17697a82168620, type: 2}
+    - target: {fileID: -5859236356072154334, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 906c9a2dba0ff2b47aeb2b2c9395a9fb, type: 2}
+    - target: {fileID: -5842541594873183187, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5842541594873183187, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e4197b0d9fb374aa4deea58ebfc9ee, type: 2}
+    - target: {fileID: -5842541594873183187, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 906c9a2dba0ff2b47aeb2b2c9395a9fb, type: 2}
+    - target: {fileID: -4292824698482994511, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292824698482994511, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3dd5ea36613aa3846934f7419eac2e93, type: 2}
+    - target: {fileID: -4292824698482994511, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 906c9a2dba0ff2b47aeb2b2c9395a9fb, type: 2}
     - target: {fileID: 919132149155446097, guid: 31369aa2ad344e14285eb9c31831c924, type: 3}
       propertyPath: m_Name
       value: arbol_mezquite

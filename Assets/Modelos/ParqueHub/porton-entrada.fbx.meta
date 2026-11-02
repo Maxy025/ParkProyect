@@ -3,7 +3,17 @@ guid: 311fe9e50a52fdd41a4cd0c380d592ed
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ornament-metal
+    second: {fileID: 2100000, guid: c689dcee2e259ae4088884e8a5f19b4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pilar
+    second: {fileID: 2100000, guid: 6c74e62e4afa7f54db8c6d3fba443439, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

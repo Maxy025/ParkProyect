@@ -48,10 +48,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7772128307781066043, guid: 524bd8c9a2f6d3e4481a75e7a5a3ae83, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b98409edf7a37c44b7216c716b21a4e, type: 2}
     - target: {fileID: 919132149155446097, guid: 524bd8c9a2f6d3e4481a75e7a5a3ae83, type: 3}
       propertyPath: m_Name
       value: arbusto_cenizo
       objectReference: {fileID: 0}
+    - target: {fileID: 7521407070565164059, guid: 524bd8c9a2f6d3e4481a75e7a5a3ae83, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521407070565164059, guid: 524bd8c9a2f6d3e4481a75e7a5a3ae83, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 248db7fbc7dfda64b82dddddb3e05ab4, type: 2}
+    - target: {fileID: 7521407070565164059, guid: 524bd8c9a2f6d3e4481a75e7a5a3ae83, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 906c9a2dba0ff2b47aeb2b2c9395a9fb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
