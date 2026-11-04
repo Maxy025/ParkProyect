@@ -136,6 +136,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   sonidoDepositar:
-    clips: []
+    clips:
+    - {fileID: 8300000, guid: 0cca86f1be02c234fb7e9ee1d8b6bd23, type: 3}
     volumen: 1
     rangoTono: {x: 0.95, y: 1.05}
