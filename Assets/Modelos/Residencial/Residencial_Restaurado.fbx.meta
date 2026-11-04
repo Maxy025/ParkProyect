@@ -3,7 +3,17 @@ guid: 7be2bdc6d2e86d64c9de46277e870767
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: 653bedf2f20b02046a122f601864f1af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Residencial_Restaurado
+    second: {fileID: 2100000, guid: 6c2d87b497a92b8458402315bd897e1f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

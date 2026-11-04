@@ -26899,6 +26899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNivelCompletado: Nivel1_Completado
+  completarAlTocar: 1
   esperarObjetivoExtra: 1
   objetosOcultarAlLlegar:
   - {fileID: 1311928329}
@@ -26910,6 +26911,8 @@ MonoBehaviour:
   ocultarEnemigosAlLlegar: 1
   ocultarEnemigosSiYaCompletado: 1
   ocultarMalezasSiYaCompletado: 1
+  ocultarCharcosAlCompletar: 1
+  ocultarBasuraAlCompletar: 1
   indiceHabilidad: 0
   panelDesbloqueo: {fileID: 1492152838}
   mensajeMeta: {fileID: 53428605}

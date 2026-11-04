@@ -3,7 +3,17 @@ guid: d64282412a0575948b8eaa79e66cc7b1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Charco_Veneno
+    second: {fileID: 2100000, guid: eafc2b9457bf74843bb58df4edb4717d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: 6c81d984205348a4ba3470e5c57db00c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

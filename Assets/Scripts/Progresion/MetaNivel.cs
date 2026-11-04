@@ -13,15 +13,21 @@ using UnityEngine.Events;
 ///    invoca AlIniciarObjetivoExtra (ej. ObjetivoMalezasCortadas.Activar). El nivel se
 ///    completa cuando ese objetivo llama a CompletarNivel().
 ///
+/// C) Sin meta física (ej. nivel 3): se desmarca "Completar Al Tocar" y el nivel se completa
+///    solo cuando otro objetivo llama a CompletarNivel() (ej. ObjetivoBasuraRecolectada).
+///
 /// Al completar: se marca el Id en ProgresoJuego, se apagan los objetos "deteriorados",
 /// se encienden los "restaurados", se muestra la cuenta regresiva y se regresa al Hub.
 /// </summary>
-[RequireComponent(typeof(Collider))]
 public class MetaNivel : MonoBehaviour
 {
     [Header("Nivel")]
     [Tooltip("Id que se guarda en ProgresoJuego al completar el nivel. Usa Nivel1_Completado, Nivel2_Completado o Nivel3_Completado.")]
     [SerializeField] private string idNivelCompletado = ProgresoJuego.Nivel1;
+
+    [Tooltip("Si está marcado, la meta reacciona cuando el jugador toca su collider (trigger). " +
+             "Desmárcalo si el nivel se completa solo por un objetivo (nivel 3); entonces no necesita collider.")]
+    [SerializeField] private bool completarAlTocar = true;
 
     [Header("Objetivo extra (opcional)")]
     [Tooltip("Si está marcado, al llegar a la meta NO se completa el nivel: se invoca AlIniciarObjetivoExtra " +
@@ -49,6 +55,12 @@ public class MetaNivel : MonoBehaviour
 
     [Tooltip("Si el nivel ya se había completado antes, al volver a entrar se ocultan las malezas de la escena.")]
     [SerializeField] private bool ocultarMalezasSiYaCompletado = true;
+
+    [Tooltip("Oculta los charcos (ZonaPeligrosa) de la escena al completar el nivel y al volver a entrar si ya estaba completado.")]
+    [SerializeField] private bool ocultarCharcosAlCompletar = true;
+
+    [Tooltip("Oculta la basura (ObjetoBasura) de la escena al completar el nivel y al volver a entrar si ya estaba completado.")]
+    [SerializeField] private bool ocultarBasuraAlCompletar = true;
 
     [Header("Recompensa (opcional)")]
     [Tooltip("-1 = ninguna (nivel 3) · 0 = Tijeras (nivel 1) · 1 = Regar (nivel 2) · 2 = Basura")]
@@ -109,7 +121,7 @@ public class MetaNivel : MonoBehaviour
 
     private void Reset()
     {
-        GetComponent<Collider>().isTrigger = true;
+        if (TryGetComponent(out Collider colisionador)) colisionador.isTrigger = true;
     }
 
     private void Start()
@@ -124,11 +136,13 @@ public class MetaNivel : MonoBehaviour
         {
             if (ocultarEnemigosSiYaCompletado) OcultarEnemigos();
             if (ocultarMalezasSiYaCompletado) OcultarMalezas();
+            OcultarCharcosYBasura();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!completarAlTocar) return;
         if (llegada) return;
         if (!other.CompareTag("Player")) return;
 
@@ -170,6 +184,7 @@ public class MetaNivel : MonoBehaviour
         AplicarRestauracion(true);
 
         if (ocultarEnemigosAlLlegar) OcultarEnemigos();
+        OcultarCharcosYBasura();
         if (mensajeMeta != null) mensajeMeta.SetActive(true);
 
         ReproductorAudio.Reproducir2D(sonidoCompletar);
@@ -242,9 +257,22 @@ public class MetaNivel : MonoBehaviour
 
     private void OcultarMalezas()
     {
-        Maleza[] malezas = FindObjectsByType<Maleza>(FindObjectsSortMode.None);
-        foreach (Maleza maleza in malezas)
-            if (maleza.gameObject.scene == gameObject.scene)
-                maleza.gameObject.SetActive(false);
+        OcultarDeLaEscena<Maleza>();
+    }
+
+    /// <summary>Oculta los charcos y la basura que queden, según las casillas del Inspector.</summary>
+    private void OcultarCharcosYBasura()
+    {
+        if (ocultarCharcosAlCompletar) OcultarDeLaEscena<ZonaPeligrosa>();
+        if (ocultarBasuraAlCompletar) OcultarDeLaEscena<ObjetoBasura>();
+    }
+
+    /// <summary>Desactiva todos los objetos de esta escena que tengan el componente T.</summary>
+    private void OcultarDeLaEscena<T>() where T : Component
+    {
+        T[] componentes = FindObjectsByType<T>(FindObjectsSortMode.None);
+        foreach (T componente in componentes)
+            if (componente.gameObject.scene == gameObject.scene)
+                componente.gameObject.SetActive(false);
     }
 }

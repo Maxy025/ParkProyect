@@ -17,7 +17,20 @@ public class BoteBasura : MonoBehaviour
     [Tooltip("Sonido al depositar la basura en el bote.")]
     [SerializeField] private SonidoAleatorio sonidoDepositar = new SonidoAleatorio();
 
+    /// <summary>
+    /// Se invoca al depositar basura en CUALQUIER bote (envía la cantidad de esa entrega).
+    /// Como el bote se crea en tiempo de ejecución, los objetivos de nivel se suscriben aquí
+    /// (ej. ObjetivoBasuraRecolectada en modo AlDepositar).
+    /// </summary>
+    public static event System.Action<int> AlDepositarEnCualquierBote;
+
     private HabilidadRecolectarBasura habilidad;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void LimpiarEventoEstatico()
+    {
+        AlDepositarEnCualquierBote = null;
+    }
 
     public void Inicializar(HabilidadRecolectarBasura habilidadPropietaria)
     {
@@ -29,8 +42,10 @@ public class BoteBasura : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (habilidad == null || habilidad.BasuraCargada <= 0) return;
 
-        totalDepositado += habilidad.DepositarTodo();
+        int cantidad = habilidad.DepositarTodo();
+        totalDepositado += cantidad;
         ReproductorAudio.ReproducirEn(sonidoDepositar, transform.position);
         AlDepositarBasura?.Invoke(totalDepositado);
+        AlDepositarEnCualquierBote?.Invoke(cantidad);
     }
 }

@@ -3,7 +3,17 @@ guid: 047703640a5df4945a825c74570482a6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Charco_Aceite
+    second: {fileID: 2100000, guid: 41244d3ca88a9eb4fab1042966ff7fc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: bcd377e84c37f28418efab555d91ba58, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
