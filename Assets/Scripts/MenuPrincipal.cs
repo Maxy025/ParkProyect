@@ -8,6 +8,16 @@ public class MenuPrincipal : MonoBehaviour
 
     [SerializeField] private GameObject panelAjustes;
 
+    [Tooltip("Botón 'Salir'. En la versión web se oculta, porque el navegador no permite cerrar la pestaña desde el juego.")]
+    [SerializeField] private GameObject botonSalir;
+
+    private void Start()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        if (botonSalir != null) botonSalir.SetActive(false);
+#endif
+    }
+
     public void IrAInicio()
     {
         // Partida nueva: se borran los objetivos, niveles completados y

@@ -209,7 +209,13 @@ public class GestorAudio : MonoBehaviour
 
         AplicarVolumenMusica(VolumenMusicaActual);
         AplicarVolumenEfectos(VolumenEfectosActual);
+
+        // En WebGL el navegador solo permite entrar a pantalla completa tras un clic del jugador.
+        // Si se pide al cargar, Unity lo aplica en el PRIMER clic (por ejemplo en "Jugar"),
+        // lo cual sorprende al jugador. En web se deja en ventana y se activa desde Ajustes.
+#if !UNITY_WEBGL || UNITY_EDITOR
         Screen.fullScreen = pantallaCompleta;
+#endif
     }
 
     public void EstablecerVolumenMusica(float volumen01)

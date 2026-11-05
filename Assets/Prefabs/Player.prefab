@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094909443540601466}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9999449, z: -0, w: -0.010498648}
+  m_LocalRotation: {x: 0, y: 0.99997914, z: 0, w: -0.00646328}
   m_LocalPosition: {x: 0.16221504, y: 0, z: 7.724245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1629,8 +1629,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7106436872095803643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9993693, z: 0, w: -0.03551184}
-  m_LocalPosition: {x: 0.37210965, y: 0.25, z: 133.18932}
+  m_LocalRotation: {x: -7.9802755e-11, y: 0.99997914, z: -0.000000012346842, w: -0.0064632795}
+  m_LocalPosition: {x: 0.029415578, y: 0, z: 2.2754498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   sonidoCambiarHabilidad:
     clips:
     - {fileID: 8300000, guid: 663d625fcce92b54bb187a90eac9df28, type: 3}
-    volumen: 1
+    volumen: 0.667
     rangoTono: {x: 0.95, y: 1.05}
   AlEquiparHabilidad:
     m_PersistentCalls:
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   sonidoAtaque:
     clips:
     - {fileID: 8300000, guid: 75b6de152feb5474d9ced504af976dcf, type: 3}
-    volumen: 0.7
+    volumen: 0.601
     rangoTono: {x: 0.95, y: 1.05}
   sonidoImpacto:
     clips:
@@ -2407,17 +2407,17 @@ MonoBehaviour:
   sonidoAparecerBote:
     clips:
     - {fileID: 8300000, guid: 6a6325fba97b4c64d9224804f46169dd, type: 3}
-    volumen: 1
+    volumen: 0.571
     rangoTono: {x: 0.95, y: 1.05}
   sonidoRecolectar:
     clips:
     - {fileID: 8300000, guid: e7458e060649331478603de34e7885d1, type: 3}
-    volumen: 1
+    volumen: 0.571
     rangoTono: {x: 0.95, y: 1.05}
   sonidoInventarioLleno:
     clips:
     - {fileID: 8300000, guid: af882f278778b644880eb40c38086931, type: 3}
-    volumen: 1
+    volumen: 0.619
     rangoTono: {x: 0.95, y: 1.05}
   esperaAvisoLleno: 1
 --- !u!114 &5837303504877185704

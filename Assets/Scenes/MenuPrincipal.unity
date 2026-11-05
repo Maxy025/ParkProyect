@@ -394,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreEscenaHub: ParqueHub
   panelAjustes: {fileID: 114885216}
+  botonSalir: {fileID: 2027127041}
 --- !u!1 &103703386
 GameObject:
   m_ObjectHideFlags: 0

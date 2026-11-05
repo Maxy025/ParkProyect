@@ -9690,7 +9690,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 723aa30ad49cef8478dfd3b5fbe92532, type: 3}
     volumen: 1
     rangoTono: {x: 0.95, y: 1.05}
-  idPuntoAparicionReinicio: SpawnHub
+  idPuntoAparicionReinicio: DesdeHub
   nombreEscenaMenuPrincipal: MenuPrincipal
 --- !u!1 &1459053271
 GameObject:

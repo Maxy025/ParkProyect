@@ -112,7 +112,6 @@ public class HabilidadRecolectarBasura : Habilidad
         ActualizarVelocidadMovimiento();
 
         animator.SetInteger("basuraEnMano", basuraCargada);
-        Debug.Log(basuraCargada);
 
         return true;
     }

@@ -40,4 +40,11 @@ public class PanelAjustes : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    private void OnDisable()
+    {
+        // En WebGL las preferencias se escriben al almacenamiento del navegador solo
+        // al llamar Save(); se guarda una vez al cerrar el panel (no en cada movimiento del slider).
+        PlayerPrefs.Save();
+    }
 }
