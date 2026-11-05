@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094909443540601466}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.021226618, y: 0.9783189, z: -0.12981878, w: 0.15996455}
-  m_LocalPosition: {x: -2.3755853, y: 2.014922, z: 7.0701447}
+  m_LocalRotation: {x: -0, y: 0.9999449, z: -0, w: -0.010498648}
+  m_LocalPosition: {x: 0.16221504, y: 0, z: 7.724245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,7 +114,7 @@ MonoBehaviour:
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
-    Value: 161.42754
+    Value: -178.79692
     Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 15.117495
+    Value: 0
     Center: 17.5
     Range: {x: 0, y: 45}
     Wrap: 0
@@ -1629,8 +1629,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7106436872095803643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02122662, y: 0.9783189, z: -0.12981881, w: 0.15996456}
-  m_LocalPosition: {x: -2.3755853, y: 2.014922, z: 7.0701447}
+  m_LocalRotation: {x: 0, y: 0.9993693, z: 0, w: -0.03551184}
+  m_LocalPosition: {x: 0.37210965, y: 0.25, z: 133.18932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1964,6 +1964,7 @@ GameObject:
   - component: {fileID: 2323739316650782202}
   - component: {fileID: 5837303504877185704}
   - component: {fileID: 3973968435928811232}
+  - component: {fileID: 7577005787992815306}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2303,8 +2304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danoAtaque: 10
-  rangoAtaque: 1.5
-  radioAtaque: 0.6
+  rangoAtaque: 2
+  radioAtaque: 0.9
   enfriamientoAtaque: 0.5
   mascaraCapaEnemigo:
     serializedVersion: 2
@@ -2335,7 +2336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d6157812d08e74ab158df8ccb02392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreHabilidad: Habilidad
+  nombreHabilidad: Tijeras de podar
   icono: {fileID: -610984585, guid: 1641396f60cd0b647b788d0050a87f5d, type: 3}
   descripcion: Unas tijeras utilizadas para cortar cualquier tipo de maleza.
   estaDesbloqueada: 0
@@ -2352,7 +2353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9323a486bfb3c4ea6da437b1ae7b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreHabilidad: Habilidad
+  nombreHabilidad: Regadera
   icono: {fileID: 1946118153, guid: 1641396f60cd0b647b788d0050a87f5d, type: 3}
   descripcion: "Una regadera de mano que permite regar plantas y limpiar sustancias
     da\xF1inas del suelo."
@@ -2389,7 +2390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd667d891f2616479288df580ef5cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreHabilidad: Habilidad
+  nombreHabilidad: Bote de basura
   icono: {fileID: -1136384024, guid: 1641396f60cd0b647b788d0050a87f5d, type: 3}
   descripcion: Un bote de basura magico que aparece cuando lo llames, puedes agregar
     todo tipo de basura sin limite alguno.
@@ -2473,6 +2474,25 @@ MonoBehaviour:
     volumen: 1
     rangoTono: {x: 0.95, y: 1.05}
   mezclaEspacial: 0
+--- !u!114 &7577005787992815306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856095896132595490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5dcdffc9c4a2a40a300f792eb30104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelo: {fileID: 0}
+  usarDestello: 1
+  colorDestello: {r: 1, g: 1, b: 1, a: 1}
+  duracionDestello: 0.08
+  duracionParpadeo: 0.9
+  intervaloParpadeo: 0.07
+  ignorarMaterialesCon: Contorno
 --- !u!1 &7909593715792670476
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: bdb9cf7b62d42f54c9b19013cf1a5a75
+guid: ae4ecdb6625da384d9beeed45ee6a24e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartel
+    second: {fileID: 2100000, guid: cbce56092d5a46d46965b6510f131b0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: 26efa60aa0b299840b05e724d3c80239, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: ad4f90ffe5284e14e8f038a4e5731a85
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camellon_Restaurado
+    second: {fileID: 2100000, guid: 77325fd1353c8a543a1aa5f5b08f4e90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: d7c3b880c238dd247825f4e82c5aa2ef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: c54cf21600653b8408ddb053b35b07b2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: aa108782f670caf4386c31a675d311e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maleza
+    second: {fileID: 2100000, guid: aff234f860eceb64493b741fc2844737, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

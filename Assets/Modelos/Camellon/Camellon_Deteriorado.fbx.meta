@@ -3,7 +3,17 @@ guid: eaca7c91746d71040bd62cf0e2ea36b6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camellon_Deteriorado
+    second: {fileID: 2100000, guid: d2bec8f34e9d51143a6b2bc47402bd4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: 5f252e83f25e2464fbda913872d3cad2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

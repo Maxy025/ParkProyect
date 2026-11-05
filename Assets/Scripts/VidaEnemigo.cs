@@ -21,6 +21,9 @@ public class VidaEnemigo : MonoBehaviour, IDanable
     [SerializeField] private SonidoAleatorio sonidoMuerte = new SonidoAleatorio();
 
     [Header("Eventos")]
+    [Tooltip("Se invoca cada vez que el enemigo recibe daño sin morir (lo usa EfectoDanoEnemigo para parpadear en rojo).")]
+    public UnityEvent AlRecibirDano = new UnityEvent();
+
     [Tooltip("Se invoca una sola vez cuando el enemigo muere.")]
     public UnityEvent AlMorir = new UnityEvent();
 
@@ -56,6 +59,7 @@ public class VidaEnemigo : MonoBehaviour, IDanable
         }
 
         ReproductorAudio.ReproducirEn(sonidoDano, transform.position);
+        AlRecibirDano?.Invoke();
 
         // Reacción al golpe: persigue al jugador y retrocede (cancela su ataque).
         if (alertarAlRecibirDano && ia != null)

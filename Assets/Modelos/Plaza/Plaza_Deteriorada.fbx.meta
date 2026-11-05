@@ -3,7 +3,17 @@ guid: f99cf397fe9b21c41a04183387a17ba5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno
+    second: {fileID: 2100000, guid: 731757711bc82924788afa5a9dd3a7f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaza_Deteriorada
+    second: {fileID: 2100000, guid: 691c8aed64a4d7f4ea0169d66bc73736, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
